@@ -9,15 +9,21 @@ export interface AnimatedStack extends ParamListBase {
   DoubleTapMessage: undefined
 }
 
+export interface ReanimatedStack extends ParamListBase {
+  ReanimatedScreen: undefined
+  Begin: undefined
+}
+
 export interface ReactHookStack extends ParamListBase {
   HigherOrderComponent: undefined
 }
 
 export interface RootStackParamList extends ParamListBase {
   AnimatedStack: NavigatorScreenParams<AnimatedStack>
+  ReanimatedStack: NavigatorScreenParams<ReanimatedStack>
   HomeScreen: undefined
 }
-export type AllScreenParamList = RootStackParamList & AnimatedStack & ReactHookStack
+export type AllScreenParamList = RootStackParamList & AnimatedStack & ReactHookStack & ReanimatedStack
 
 declare global {
   namespace ReactNavigation {

@@ -6,6 +6,7 @@ import React from "react";
 import { RootStackParamList } from "./RouteParams";
 import { NavigationContainer } from "@react-navigation/native";
 import AnimatedStack from "./AnimatedStack";
+import ReanimatedStack from "./ReanimatedStack";
 import HomeScreen from "../screens/HomeScreen";
 import ReactHookStack from "./ReactHookStack";
 
@@ -40,6 +41,11 @@ const AppNavigation = () => {
           <Stack.Screen
             name="ReactHookStack"
             component={ReactHookStack}
+            options={{ gestureEnabled: false }}
+          />
+          <Stack.Screen
+            name="ReanimatedStack"
+            component={ReanimatedStack}
             options={{ gestureEnabled: false }}
           />
         </Stack.Navigator>

@@ -17,6 +17,12 @@ const HomeScreen = () => {
     });
   };
 
+  const goToReanimatedScreen = () => {
+    navigate("ReanimatedStack", {
+      screen: "ReanimatedScreen",
+    });
+  };
+
   return (
     <View className="flex-1 bg-white flex justify-center items-center">
       <View>
@@ -24,14 +30,26 @@ const HomeScreen = () => {
           className="rounded-lg bg-slate-500 py-2 px-4 mb-2"
           onPress={goToAnimatedScreen}
         >
-          <Text className="text-white text-base font-bold text-center">Animated</Text>
+          <Text className="text-white text-base font-bold text-center">
+            Animated
+          </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           className="rounded-lg bg-slate-600 py-2 px-4 mb-2"
           onPress={goToReactHookScreen}
         >
-          <Text className="text-white text-base font-bold text-center">React Hook</Text>
+          <Text className="text-white text-base font-bold text-center">
+            React Hook
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          className="rounded-lg bg-slate-700 py-2 px-4 mb-2"
+          onPress={goToReanimatedScreen}
+        >
+          <Text className="text-white text-base font-bold text-center">
+            Reanimated
+          </Text>
         </TouchableOpacity>
       </View>
     </View>
