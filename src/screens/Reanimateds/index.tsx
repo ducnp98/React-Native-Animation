@@ -27,6 +27,14 @@ const ReanimatedScreen = () => {
             Basic Gesture
           </Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("DragBottomSheet")}
+          className="py-2 px-3 bg-purple-400 rounded-lg mb-2"
+        >
+          <Text className="text-white text-base font-bold text-center">
+            Drag Bottom Sheet
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
