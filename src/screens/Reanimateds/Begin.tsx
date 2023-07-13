@@ -1,57 +1,56 @@
-import React, { useEffect } from 'react';
-import { StyleSheet, View } from 'react-native';
+import React, { useEffect } from "react";
+import { View } from "react-native";
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
   withSpring,
   withRepeat,
-  useAnimatedGestureHandler,
-} from 'react-native-reanimated';
+  withTiming,
+  Easing,
+} from "react-native-reanimated";
 
 const SIZE = 100.0;
 
 const handleRotation = (progress: Animated.SharedValue<number>) => {
-  'worklet';
-
+  "worklet";
   return `${progress.value * 2 * Math.PI}rad`;
 };
 
 const Begin = () => {
-  const progress = useSharedValue(1);
-  const scale = useSharedValue(2);
+  const progress1 = useSharedValue(1);
+  const progress2 = useSharedValue(1);
 
-  const reanimatedStyle = useAnimatedStyle(() => {
+  const reanimatedStyle1 = useAnimatedStyle(() => {
     return {
-      opacity: progress.value,
-      borderRadius: (progress.value * SIZE) / 2,
-      transform: [{ scale: scale.value }, { rotate: handleRotation(progress) }],
+      opacity: progress1.value,
+    };
+  }, []);
+
+  const reanimatedStyle2 = useAnimatedStyle(() => {
+    return {
+      opacity: progress2.value,
+      transform: [{ scale: progress2.value }],
+      backgroundColor: progress2.value > 0.7 ? 'red' : 'blue'
     };
   }, []);
 
   useEffect(() => {
-    progress.value = withRepeat(withSpring(0.5), -1, true);
-    scale.value = withRepeat(withSpring(1), -1, true);
+    progress1.value = withRepeat(withTiming(0, { duration: 2000, easing: Easing.circle}), -1, true);
+    progress2.value = withRepeat(withSpring(0.5), -1, true)
   }, []);
 
   return (
-    <View style={styles.container}>
+    <View className="flex-1 bg-white items-center justify-center gap-4">
       <Animated.View
-        style={[
-          { height: SIZE, width: SIZE, backgroundColor: 'blue' },
-          reanimatedStyle,
-        ]}
+        className="bg-purple-400 rounded-lg"
+        style={[{ height: SIZE, width: SIZE }, reanimatedStyle1]}
+      />
+      <Animated.View
+        className=" rounded-lg"
+        style={[{ height: SIZE, width: SIZE }, reanimatedStyle2]}
       />
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-
-export default Begin
+export default Begin;

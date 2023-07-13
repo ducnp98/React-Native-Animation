@@ -1,8 +1,12 @@
 import React from "react";
-import { CardStyleInterpolators, createStackNavigator } from "@react-navigation/stack";
+import {
+  CardStyleInterpolators,
+  createStackNavigator,
+} from "@react-navigation/stack";
 import { RootStackParamList } from "navigation/RouteParams";
 import ReanimatedScreen from "../screens/Reanimateds";
 import Begin from "../screens/Reanimateds/Begin";
+import BasicGesture from "../screens/Reanimateds/BasicGesture";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -29,6 +33,11 @@ const AnimatedStack = () => {
       <Stack.Screen
         name="Begin"
         component={Begin}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="BasicGesture"
+        component={BasicGesture}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
