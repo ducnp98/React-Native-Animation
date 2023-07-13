@@ -35,6 +35,14 @@ const ReanimatedScreen = () => {
             Drag Bottom Sheet
           </Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("ScrollView")}
+          className="py-2 px-3 bg-purple-500 rounded-lg mb-2"
+        >
+          <Text className="text-white text-base font-bold text-center">
+            Scroll View
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

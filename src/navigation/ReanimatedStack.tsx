@@ -8,6 +8,7 @@ import ReanimatedScreen from "../screens/Reanimateds";
 import Begin from "../screens/Reanimateds/Begin";
 import BasicGesture from "../screens/Reanimateds/BasicGesture";
 import DragBottomSheet from "../screens/Reanimateds/DragBottomSheet";
+import ScrollView from "../screens/Reanimateds/Scrollview";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -44,6 +45,11 @@ const AnimatedStack = () => {
       <Stack.Screen
         name="DragBottomSheet"
         component={DragBottomSheet}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ScrollView"
+        component={ScrollView}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
