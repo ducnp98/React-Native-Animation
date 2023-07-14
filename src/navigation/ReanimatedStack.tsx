@@ -10,6 +10,7 @@ import BasicGesture from "../screens/Reanimateds/BasicGesture";
 import DragBottomSheet from "../screens/Reanimateds/DragBottomSheet";
 import ScrollView from "../screens/Reanimateds/Scrollview";
 import HeaderScroll from "../screens/Reanimateds/HeaderScroll";
+import SwipeToUnlock from "../screens/Reanimateds/SwipeToUnlock";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -56,6 +57,11 @@ const AnimatedStack = () => {
       <Stack.Screen
         name="HeaderScroll"
         component={HeaderScroll}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SwipeToUnlock"
+        component={SwipeToUnlock}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

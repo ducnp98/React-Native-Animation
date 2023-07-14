@@ -51,6 +51,14 @@ const ReanimatedScreen = () => {
             Header Scroll
           </Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("SwipeToUnlock")}
+          className="py-2 px-3 bg-purple-700 rounded-lg mb-2"
+        >
+          <Text className="text-white text-base font-bold text-center">
+            Swipe To Unlock
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
