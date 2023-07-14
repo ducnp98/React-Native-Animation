@@ -67,9 +67,9 @@ const Page: React.FC<PageProps> = ({ index, translateX, title }) => {
       style={[ styles.container ]}
     >
       <Animated.View style={[styles.square, rStyle]} />
-      {/* <Animated.View className='absolute' style={[rTextStyle]}>
+      <Animated.View className='absolute' style={[rTextStyle]}>
         <Text className="text-6xl text-white uppercase font-extrabold">{title}</Text>
-      </Animated.View> */}
+      </Animated.View>
     </View>
   );
 };

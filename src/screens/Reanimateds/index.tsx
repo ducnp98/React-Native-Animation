@@ -43,6 +43,14 @@ const ReanimatedScreen = () => {
             Scroll View
           </Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("HeaderScroll")}
+          className="py-2 px-3 bg-purple-600 rounded-lg mb-2"
+        >
+          <Text className="text-white text-base font-bold text-center">
+            Header Scroll
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
