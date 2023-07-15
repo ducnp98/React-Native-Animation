@@ -91,6 +91,14 @@ const ReanimatedScreen = () => {
             Double tap
           </Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("ScrollWithPanGesture")}
+          className="py-2 px-3 bg-fuchsia-800 rounded-lg mb-2"
+        >
+          <Text className="text-white text-base font-bold text-center">
+            Scroll With PanGesture
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

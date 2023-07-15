@@ -15,6 +15,7 @@ import ScrollviewHorizontal from "../screens/Reanimateds/ScrollviewHorizontal";
 import ColorInterpolate from "../screens/Reanimateds/ColorInterpolate";
 import PinchGesture from "../screens/Reanimateds/PinchGesture";
 import DoubleTap from "../screens/Reanimateds/DoubleTap";
+import ScrollWithPanGesture from "../screens/Reanimateds/ScrollWithPanGesture";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -83,9 +84,14 @@ const AnimatedStack = () => {
         component={PinchGesture}
         options={{ headerShown: false }}
       />
-            <Stack.Screen
+      <Stack.Screen
         name="DoubleTap"
         component={DoubleTap}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ScrollWithPanGesture"
+        component={ScrollWithPanGesture}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
