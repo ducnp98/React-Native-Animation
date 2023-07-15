@@ -59,6 +59,14 @@ const ReanimatedScreen = () => {
             Swipe To Unlock
           </Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("ScrollviewHorizontal")}
+          className="py-2 px-3 bg-purple-800 rounded-lg mb-2"
+        >
+          <Text className="text-white text-base font-bold text-center">
+            Scroll view Horizontal
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
