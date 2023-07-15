@@ -11,11 +11,6 @@ import Animated, {
 
 const SIZE = 100.0;
 
-const handleRotation = (progress: Animated.SharedValue<number>) => {
-  "worklet";
-  return `${progress.value * 2 * Math.PI}rad`;
-};
-
 const Begin = () => {
   const progress1 = useSharedValue(1);
   const progress2 = useSharedValue(1);

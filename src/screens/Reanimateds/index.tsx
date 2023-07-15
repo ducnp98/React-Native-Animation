@@ -67,6 +67,14 @@ const ReanimatedScreen = () => {
             Scroll view Horizontal
           </Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("ColorInterpolate")}
+          className="py-2 px-3 bg-purple-900 rounded-lg mb-2"
+        >
+          <Text className="text-white text-base font-bold text-center">
+            Color Interpolate
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
