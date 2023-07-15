@@ -80,7 +80,15 @@ const ReanimatedScreen = () => {
           className="py-2 px-3 bg-fuchsia-950 rounded-lg mb-2"
         >
           <Text className="text-white text-base font-bold text-center">
-          PinchGesture
+            PinchGesture
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("DoubleTap")}
+          className="py-2 px-3 bg-fuchsia-900 rounded-lg mb-2"
+        >
+          <Text className="text-white text-base font-bold text-center">
+            Double tap
           </Text>
         </TouchableOpacity>
       </View>
