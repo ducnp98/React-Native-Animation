@@ -75,6 +75,14 @@ const ReanimatedScreen = () => {
             Color Interpolate
           </Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("PinchGesture")}
+          className="py-2 px-3 bg-fuchsia-950 rounded-lg mb-2"
+        >
+          <Text className="text-white text-base font-bold text-center">
+          PinchGesture
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

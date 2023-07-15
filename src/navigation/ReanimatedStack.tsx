@@ -13,6 +13,7 @@ import HeaderScroll from "../screens/Reanimateds/HeaderScroll";
 import SwipeToUnlock from "../screens/Reanimateds/SwipeToUnlock";
 import ScrollviewHorizontal from "../screens/Reanimateds/ScrollviewHorizontal";
 import ColorInterpolate from "../screens/Reanimateds/ColorInterpolate";
+import PinchGesture from "../screens/Reanimateds/PinchGesture";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -74,6 +75,11 @@ const AnimatedStack = () => {
       <Stack.Screen
         name="ColorInterpolate"
         component={ColorInterpolate}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="PinchGesture"
+        component={PinchGesture}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
