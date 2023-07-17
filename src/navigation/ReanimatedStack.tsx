@@ -17,6 +17,7 @@ import PinchGesture from "../screens/Reanimateds/PinchGesture";
 import DoubleTap from "../screens/Reanimateds/DoubleTap";
 import ScrollWithPanGesture from "../screens/Reanimateds/ScrollWithPanGesture";
 import ColorPicker from "../screens/Reanimateds/ColorPicker";
+import CircleProgressBar from "../screens/Reanimateds/CircleProgressBar";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -98,6 +99,11 @@ const AnimatedStack = () => {
       <Stack.Screen
         name="ColorPicker"
         component={ColorPicker}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="CircleProgressBar"
+        component={CircleProgressBar}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

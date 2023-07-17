@@ -107,6 +107,14 @@ const ReanimatedScreen = () => {
           ColorPicker
           </Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("CircleProgressBar")}
+          className="py-2 px-3 bg-fuchsia-600 rounded-lg mb-2"
+        >
+          <Text className="text-white text-base font-bold text-center">
+          CircleProgressBar
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
