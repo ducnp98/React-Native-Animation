@@ -18,6 +18,7 @@ import DoubleTap from "../screens/Reanimateds/DoubleTap";
 import ScrollWithPanGesture from "../screens/Reanimateds/ScrollWithPanGesture";
 import ColorPicker from "../screens/Reanimateds/ColorPicker";
 import CircleProgressBar from "../screens/Reanimateds/CircleProgressBar";
+import SwipeToDelete from "../screens/Reanimateds/SwipeToDelete";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -104,6 +105,11 @@ const AnimatedStack = () => {
       <Stack.Screen
         name="CircleProgressBar"
         component={CircleProgressBar}
+        options={{ headerShown: false }}
+      />
+            <Stack.Screen
+        name="SwipeToDelete"
+        component={SwipeToDelete}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
