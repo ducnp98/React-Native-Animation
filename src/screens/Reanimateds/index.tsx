@@ -99,6 +99,14 @@ const ReanimatedScreen = () => {
             Scroll With PanGesture
           </Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("ColorPicker")}
+          className="py-2 px-3 bg-fuchsia-700 rounded-lg mb-2"
+        >
+          <Text className="text-white text-base font-bold text-center">
+          ColorPicker
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
