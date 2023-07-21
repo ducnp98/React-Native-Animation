@@ -19,6 +19,12 @@ import ScrollWithPanGesture from "../screens/Reanimateds/ScrollWithPanGesture";
 import ColorPicker from "../screens/Reanimateds/ColorPicker";
 import CircleProgressBar from "../screens/Reanimateds/CircleProgressBar";
 import SwipeToDelete from "../screens/Reanimateds/SwipeToDelete";
+import RippleEffect from "../screens/Reanimateds/RippleEffect";
+import MenuPerspective from "../screens/Reanimateds/MenuPerspective";
+import SliderCounter from "../screens/Reanimateds/SliderCounter";
+import ClockLoader from "../screens/Reanimateds/ClockLoader";
+import LayoutAnimation from "../screens/Reanimateds/LayoutAnimation";
+import FlatListAnimated from "../screens/Reanimateds/FlatListAnimated";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -107,9 +113,39 @@ const AnimatedStack = () => {
         component={CircleProgressBar}
         options={{ headerShown: false }}
       />
-            <Stack.Screen
+      <Stack.Screen
         name="SwipeToDelete"
         component={SwipeToDelete}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="RippleEffect"
+        component={RippleEffect}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="MenuPerspective"
+        component={MenuPerspective}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SliderCounter"
+        component={SliderCounter}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ClockLoader"
+        component={ClockLoader}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="LayoutAnimation"
+        component={LayoutAnimation}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="FlatListAnimated"
+        component={FlatListAnimated}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
