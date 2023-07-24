@@ -1,6 +1,12 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { SafeAreaView, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import {
+  SafeAreaView,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 const ReanimatedScreen = () => {
   const { navigate } = useNavigation();
@@ -169,6 +175,22 @@ const ReanimatedScreen = () => {
         >
           <Text className="text-white text-base font-bold text-center">
             FlatList Animated
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("TabNavigation")}
+          className="py-2 px-3 bg-red-300 rounded-lg mb-2"
+        >
+          <Text className="text-white text-base font-bold text-center">
+            Tab Navigation
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("AnimatedList")}
+          className="py-2 px-3 bg-red-200 rounded-lg mb-2"
+        >
+          <Text className="text-white text-base font-bold text-center">
+            Animated List
           </Text>
         </TouchableOpacity>
       </ScrollView>

@@ -25,6 +25,8 @@ import SliderCounter from "../screens/Reanimateds/SliderCounter";
 import ClockLoader from "../screens/Reanimateds/ClockLoader";
 import LayoutAnimation from "../screens/Reanimateds/LayoutAnimation";
 import FlatListAnimated from "../screens/Reanimateds/FlatListAnimated";
+import TabNavigation from "../screens/Reanimateds/TabNavigation";
+import AnimatedList from "../screens/Reanimateds/AnimatedList";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -146,6 +148,16 @@ const AnimatedStack = () => {
       <Stack.Screen
         name="FlatListAnimated"
         component={FlatListAnimated}
+        options={{ headerShown: false }}
+      />
+          <Stack.Screen
+        name="TabNavigation"
+        component={TabNavigation}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="AnimatedList"
+        component={AnimatedList}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
