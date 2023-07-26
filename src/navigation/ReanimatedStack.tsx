@@ -27,6 +27,7 @@ import LayoutAnimation from "../screens/Reanimateds/LayoutAnimation";
 import FlatListAnimated from "../screens/Reanimateds/FlatListAnimated";
 import TabNavigation from "../screens/Reanimateds/TabNavigation";
 import AnimatedList from "../screens/Reanimateds/AnimatedList";
+import SwipeForMore from "../screens/Reanimateds/SwipeForMore";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -150,7 +151,7 @@ const AnimatedStack = () => {
         component={FlatListAnimated}
         options={{ headerShown: false }}
       />
-          <Stack.Screen
+      <Stack.Screen
         name="TabNavigation"
         component={TabNavigation}
         options={{ headerShown: false }}
@@ -158,6 +159,11 @@ const AnimatedStack = () => {
       <Stack.Screen
         name="AnimatedList"
         component={AnimatedList}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SwipeForMore"
+        component={SwipeForMore}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

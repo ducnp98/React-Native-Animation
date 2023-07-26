@@ -179,7 +179,7 @@ const ReanimatedScreen = () => {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("TabNavigation")}
-          className="py-2 px-3 bg-red-300 rounded-lg mb-2"
+          className="py-2 px-3 bg-red-500 rounded-lg mb-2"
         >
           <Text className="text-white text-base font-bold text-center">
             Tab Navigation
@@ -187,10 +187,18 @@ const ReanimatedScreen = () => {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("AnimatedList")}
-          className="py-2 px-3 bg-red-200 rounded-lg mb-2"
+          className="py-2 px-3 bg-red-600 rounded-lg mb-2"
         >
           <Text className="text-white text-base font-bold text-center">
             Animated List
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("SwipeForMore")}
+          className="py-2 px-3 bg-red-700 rounded-lg mb-2"
+        >
+          <Text className="text-white text-base font-bold text-center">
+            Swipe For More
           </Text>
         </TouchableOpacity>
       </ScrollView>
