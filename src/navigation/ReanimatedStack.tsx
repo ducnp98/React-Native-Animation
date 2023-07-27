@@ -28,6 +28,7 @@ import FlatListAnimated from "../screens/Reanimateds/FlatListAnimated";
 import TabNavigation from "../screens/Reanimateds/TabNavigation";
 import AnimatedList from "../screens/Reanimateds/AnimatedList";
 import SwipeForMore from "../screens/Reanimateds/SwipeForMore";
+import Onboarding from "../screens/Reanimateds/Onboarding";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -164,6 +165,11 @@ const AnimatedStack = () => {
       <Stack.Screen
         name="SwipeForMore"
         component={SwipeForMore}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Onboarding"
+        component={Onboarding}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

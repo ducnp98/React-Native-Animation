@@ -17,14 +17,13 @@ import Animated, {
 import Page, { PAGE_WIDTH } from "./Page";
 
 const WIDTH = Dimensions.get("window").width;
-
 const titles = ["What's", "up", "mobile", "devs?"];
+const MAX_TRANSLATE_X = -PAGE_WIDTH * (titles.length - 1);
 
 type ContextType = {
   x: number;
 };
 
-const MAX_TRANSLATE_X = -PAGE_WIDTH * (titles.length - 1);
 
 function ScrollWithPanGesture() {
   const translateX = useSharedValue(0);
@@ -48,9 +47,10 @@ function ScrollWithPanGesture() {
       translateX.value = withDecay(
         { velocity: event.velocityX },
         (isFinish) => {
+          const currentPage = Math.abs(Math.floor(clampedTranslateX.value / WIDTH))
           translateX.value = withDelay(
             200,
-            withSpring(-WIDTH, { duration: 2000 })
+            withSpring(-WIDTH * currentPage, { duration: 2000 })
           );
         }
       );

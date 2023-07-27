@@ -201,6 +201,14 @@ const ReanimatedScreen = () => {
             Swipe For More
           </Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("Onboarding")}
+          className="py-2 px-3 bg-red-800 rounded-lg mb-2"
+        >
+          <Text className="text-white text-base font-bold text-center">
+            Onboarding
+          </Text>
+        </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );
