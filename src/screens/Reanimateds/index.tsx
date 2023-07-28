@@ -1,12 +1,9 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import {
-  SafeAreaView,
-  ScrollView,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { SafeAreaView, ScrollView, Text, TouchableOpacity } from "react-native";
+
+const buttonStyle = "py-2 px-3 rounded-lg mb-2";
+const textStyle = "text-white text-base font-bold text-center";
 
 const ReanimatedScreen = () => {
   const { navigate } = useNavigation();
@@ -16,198 +13,156 @@ const ReanimatedScreen = () => {
 
   return (
     <SafeAreaView className="flex-1 bg-white flex justify-center items-center">
-      <ScrollView className="flex-1 w-full px-20">
+      <ScrollView className="flex-1 w-full px-20 my-4">
         <TouchableOpacity
           onPress={() => goToScreen("Begin")}
-          className="py-2 px-3 bg-purple-200 rounded-lg mb-2"
+          className={`${buttonStyle} bg-purple-200`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Begin
-          </Text>
+          <Text className={textStyle}>Begin</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("BasicGesture")}
-          className="py-2 px-3 bg-purple-300 rounded-lg mb-2"
+          className={`${buttonStyle} bg-purple-300`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Basic Gesture
-          </Text>
+          <Text className={textStyle}>Basic Gesture</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("DragBottomSheet")}
-          className="py-2 px-3 bg-purple-400 rounded-lg mb-2"
+          className={`${buttonStyle} bg-purple-400`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Drag Bottom Sheet
-          </Text>
+          <Text className={textStyle}>Drag Bottom Sheet</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("ScrollView")}
-          className="py-2 px-3 bg-purple-500 rounded-lg mb-2"
+          className={`${buttonStyle} bg-purple-500`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Scroll View
-          </Text>
+          <Text className={textStyle}>Scroll View</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("HeaderScroll")}
-          className="py-2 px-3 bg-purple-600 rounded-lg mb-2"
+          className={`${buttonStyle} bg-purple-600`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Header Scroll
-          </Text>
+          <Text className={textStyle}>Header Scroll</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("SwipeToUnlock")}
-          className="py-2 px-3 bg-purple-700 rounded-lg mb-2"
+          className={`${buttonStyle} bg-purple-700`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Swipe To Unlock
-          </Text>
+          <Text className={textStyle}>Swipe To Unlock</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("ScrollviewHorizontal")}
-          className="py-2 px-3 bg-purple-800 rounded-lg mb-2"
+          className={`${buttonStyle} bg-purple-800`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Scroll view Horizontal
-          </Text>
+          <Text className={textStyle}>Scroll view Horizontal</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("ColorInterpolate")}
-          className="py-2 px-3 bg-purple-900 rounded-lg mb-2"
+          className={`${buttonStyle} bg-purple-900`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Color Interpolate
-          </Text>
+          <Text className={textStyle}>Color Interpolate</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("PinchGesture")}
-          className="py-2 px-3 bg-fuchsia-950 rounded-lg mb-2"
+          className={`${buttonStyle} bg-fuchsia-950`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            PinchGesture
-          </Text>
+          <Text className={textStyle}>PinchGesture</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("DoubleTap")}
-          className="py-2 px-3 bg-fuchsia-900 rounded-lg mb-2"
+          className={`${buttonStyle} bg-fuchsia-900`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Double tap
-          </Text>
+          <Text className={textStyle}>Double tap</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("ScrollWithPanGesture")}
-          className="py-2 px-3 bg-fuchsia-800 rounded-lg mb-2"
+          className={`${buttonStyle} bg-fuchsia-800`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Scroll With PanGesture
-          </Text>
+          <Text className={textStyle}>Scroll With PanGesture</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("ColorPicker")}
-          className="py-2 px-3 bg-fuchsia-700 rounded-lg mb-2"
+          className={`${buttonStyle} bg-fuchsia-700`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            ColorPicker
-          </Text>
+          <Text className={textStyle}>ColorPicker</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("CircleProgressBar")}
-          className="py-2 px-3 bg-fuchsia-600 rounded-lg mb-2"
+          className={`${buttonStyle} bg-fuchsia-600`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            CircleProgressBar
-          </Text>
+          <Text className={textStyle}>CircleProgressBar</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("SwipeToDelete")}
-          className="py-2 px-3 bg-fuchsia-500 rounded-lg mb-2"
+          className={`${buttonStyle} bg-fuchsia-500`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Swipe To Delete
-          </Text>
+          <Text className={textStyle}>Swipe To Delete</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("RippleEffect")}
-          className="py-2 px-3 bg-fuchsia-400 rounded-lg mb-2"
+          className={`${buttonStyle} bg-fuchsia-400`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            RippleEffect
-          </Text>
+          <Text className={textStyle}>RippleEffect</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("MenuPerspective")}
-          className="py-2 px-3 bg-fuchsia-300 rounded-lg mb-2"
+          className={`${buttonStyle} bg-fuchsia-300`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Menu Perspective
-          </Text>
+          <Text className={textStyle}>Menu Perspective</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("SliderCounter")}
-          className="py-2 px-3 bg-fuchsia-200 rounded-lg mb-2"
+          className={`${buttonStyle} bg-fuchsia-200`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            SliderCounter
-          </Text>
+          <Text className={textStyle}>SliderCounter</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("ClockLoader")}
-          className="py-2 px-3 bg-red-200 rounded-lg mb-2"
+          className={`${buttonStyle} bg-red-200`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Clock Loader
-          </Text>
+          <Text className={textStyle}>Clock Loader</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("LayoutAnimation")}
-          className="py-2 px-3 bg-red-300 rounded-lg mb-2"
+          className={`${buttonStyle} bg-red-300`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Layout Animation
-          </Text>
+          <Text className={textStyle}>Layout Animation</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("FlatListAnimated")}
-          className="py-2 px-3 bg-red-400 rounded-lg mb-2"
+          className={`${buttonStyle} bg-red-400`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            FlatList Animated
-          </Text>
+          <Text className={textStyle}>FlatList Animated</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("TabNavigation")}
-          className="py-2 px-3 bg-red-500 rounded-lg mb-2"
+          className={`${buttonStyle} bg-red-500`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Tab Navigation
-          </Text>
+          <Text className={textStyle}>Tab Navigation</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("AnimatedList")}
-          className="py-2 px-3 bg-red-600 rounded-lg mb-2"
+          className={`${buttonStyle} bg-red-600`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Animated List
-          </Text>
+          <Text className={textStyle}>Animated List</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("SwipeForMore")}
-          className="py-2 px-3 bg-red-700 rounded-lg mb-2"
+          className={`${buttonStyle} bg-red-700`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Swipe For More
-          </Text>
+          <Text className={textStyle}>Swipe For More</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => goToScreen("Onboarding")}
-          className="py-2 px-3 bg-red-800 rounded-lg mb-2"
+          className={`${buttonStyle} bg-red-800`}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Onboarding
-          </Text>
+          <Text className={textStyle}>Onboarding</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("LottieScreen")}
+          className={`${buttonStyle} bg-red-900`}
+        >
+          <Text className={textStyle}>LottieScreen</Text>
         </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>

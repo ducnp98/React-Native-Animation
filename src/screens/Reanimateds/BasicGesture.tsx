@@ -39,8 +39,6 @@ const BasicGesture = () => {
     },
     onEnd: () => {
       const distance = Math.sqrt(translateX.value ** 2 + translateY.value ** 2);
-      translateX.value = withSpring(0);
-      translateY.value = withSpring(0);
       if (distance < CIRCLE_RADIUS + SIZE / 2) {
         translateX.value = withSpring(0);
         translateY.value = withSpring(0);
