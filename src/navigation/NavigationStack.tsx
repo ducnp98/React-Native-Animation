@@ -3,9 +3,10 @@ import {
   CardStyleInterpolators,
   createStackNavigator,
 } from "@react-navigation/stack";
-import { RootStackParamList } from "navigation/RouteParams";
 import TopTabNavigation from "../screens/Navigation/TopTabNavigation";
 import Navigation from "../screens/Navigation";
+import { RootStackParamList } from "./RouteParams";
+import DrawerAnimation from "../screens/Navigation/DrawerAnimation";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -32,6 +33,11 @@ const NavigationStack = () => {
       <Stack.Screen
         name="TopTabNavigation"
         component={TopTabNavigation}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="DrawerNavigation"
+        component={DrawerAnimation}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
