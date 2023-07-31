@@ -3,6 +3,8 @@ import React from "react";
 import { Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
+const textStyle = "text-white text-base font-bold text-center";
+
 const HomeScreen = () => {
   const { navigate } = useNavigation();
   const goToAnimatedScreen = () => {
@@ -23,6 +25,12 @@ const HomeScreen = () => {
     });
   };
 
+  const goToNavigationScreen = () => {
+    navigate("NavigationStack", {
+      screen: "Navigation",
+    });
+  };
+
   return (
     <View className="flex-1 bg-white flex justify-center items-center">
       <View>
@@ -30,25 +38,27 @@ const HomeScreen = () => {
           className="rounded-lg bg-slate-500 py-2 px-4 mb-2"
           onPress={goToAnimatedScreen}
         >
-          <Text className="text-white text-base font-bold text-center">
-            Animated
-          </Text>
+          <Text className={textStyle}>Animated</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           className="rounded-lg bg-slate-600 py-2 px-4 mb-2"
           onPress={goToReactHookScreen}
         >
-          <Text className="text-white text-base font-bold text-center">
-            React Hook
-          </Text>
+          <Text className={textStyle}>React Hook</Text>
         </TouchableOpacity>
         <TouchableOpacity
           className="rounded-lg bg-slate-700 py-2 px-4 mb-2"
           onPress={goToReanimatedScreen}
         >
+          <Text className={textStyle}>Reanimated</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          className="rounded-lg bg-slate-800 py-2 px-4 mb-2"
+          onPress={goToNavigationScreen}
+        >
           <Text className="text-white text-base font-bold text-center">
-            Reanimated
+            Navigation
           </Text>
         </TouchableOpacity>
       </View>

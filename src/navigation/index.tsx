@@ -9,6 +9,7 @@ import AnimatedStack from "./AnimatedStack";
 import ReanimatedStack from "./ReanimatedStack";
 import HomeScreen from "../screens/HomeScreen";
 import ReactHookStack from "./ReactHookStack";
+import NavigationStack from "./NavigationStack";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -46,6 +47,11 @@ const AppNavigation = () => {
           <Stack.Screen
             name="ReanimatedStack"
             component={ReanimatedStack}
+            options={{ gestureEnabled: false }}
+          />
+            <Stack.Screen
+            name="NavigationStack"
+            component={NavigationStack}
             options={{ gestureEnabled: false }}
           />
         </Stack.Navigator>
