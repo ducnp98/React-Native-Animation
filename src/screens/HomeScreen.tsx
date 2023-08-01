@@ -31,6 +31,12 @@ const HomeScreen = () => {
     });
   };
 
+  const goToReanimated2Screen = () => {
+    navigate("Reanimated2Stack", {
+      screen: "Reanimated2Screen",
+    });
+  };
+
   return (
     <View className="flex-1 bg-white flex justify-center items-center">
       <View>
@@ -59,6 +65,14 @@ const HomeScreen = () => {
         >
           <Text className="text-white text-base font-bold text-center">
             Navigation
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          className="rounded-lg bg-slate-900 py-2 px-4 mb-2"
+          onPress={goToReanimated2Screen}
+        >
+          <Text className="text-white text-base font-bold text-center">
+            Reanimated 2
           </Text>
         </TouchableOpacity>
       </View>

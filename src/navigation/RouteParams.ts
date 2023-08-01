@@ -25,17 +25,25 @@ export interface NavigationStack extends ParamListBase {
   TopTabNavigation: undefined;
 }
 
+export interface Reanimated2Stack extends ParamListBase {
+  Reanimated2Screen: undefined;
+}
+
 export interface RootStackParamList extends ParamListBase {
   AnimatedStack: NavigatorScreenParams<AnimatedStack>;
   ReanimatedStack: NavigatorScreenParams<ReanimatedStack>;
+  Reanimated2Stack: NavigatorScreenParams<Reanimated2Stack>;
   ReactHookStack: NavigatorScreenParams<ReactHookStack>;
   NavigationStack: NavigatorScreenParams<NavigationStack>;
   HomeScreen: undefined;
 }
+
+
 export type AllScreenParamList = RootStackParamList &
   AnimatedStack &
   ReactHookStack &
   ReanimatedStack &
+  Reanimated2Stack &
   NavigationStack;
 
 declare global {
