@@ -5,6 +5,7 @@ import {
 } from "@react-navigation/stack";
 import { RootStackParamList } from "navigation/RouteParams";
 import ReanimatedScreen2 from "../screens/Reanimateds2";
+import Scrolling from "../screens/Reanimateds2/Scrolling";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -26,6 +27,11 @@ const Reanimated2Stack = () => {
       <Stack.Screen
         name="Reanimated2Screen"
         component={ReanimatedScreen2}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Scrolling"
+        component={Scrolling}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

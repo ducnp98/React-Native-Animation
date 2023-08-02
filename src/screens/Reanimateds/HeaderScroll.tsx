@@ -55,14 +55,19 @@ const HeaderScroll = () => {
 
   const styledGoBackButton = useAnimatedStyle(() => {
     return {
-      opacity: interpolate(translateY.value, [0, 100], [0, 1], Extrapolate.CLAMP),
-      display: translateY.value > 60 ? 'flex' : 'none'
-    }
-  })
+      opacity: interpolate(
+        translateY.value,
+        [0, 100],
+        [0, 1],
+        Extrapolate.CLAMP
+      ),
+      display: translateY.value > 60 ? "flex" : "none",
+    };
+  });
 
   const onClick = () => {
-    console.log('On click')
-  }
+    console.log("On click");
+  };
 
   return (
     <View className="flex-1 bg-white">
@@ -71,8 +76,6 @@ const HeaderScroll = () => {
           <Text>Helloo</Text>
         </View>
       </Animated.ScrollView>
-
-         
 
       <Animated.View
         className="w-full h-44 absolute bg-purple-500"
@@ -100,7 +103,9 @@ const HeaderScroll = () => {
       <Animated.View className="absolute" style={styledGoBackButton}>
         <SafeAreaView>
           <TouchableOpacity onPress={onClick}>
-            <Text className="text-white font-bold text-xl px-4 py-2">Go back</Text>
+            <Text className="text-white font-bold text-xl px-4 py-2">
+              Go back
+            </Text>
           </TouchableOpacity>
         </SafeAreaView>
       </Animated.View>
