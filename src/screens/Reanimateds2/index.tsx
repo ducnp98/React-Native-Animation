@@ -26,6 +26,12 @@ const ReanimatedScreen2 = () => {
         >
           <Text className={textStyle}>MenuBar</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("According")}
+          className={`${buttonStyle} bg-yellow-600`}
+        >
+          <Text className={textStyle}>According</Text>
+        </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );

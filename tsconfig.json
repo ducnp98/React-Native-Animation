@@ -2,8 +2,8 @@
   "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": {
-      "*": ["src/*"]
+    "paths" : {
+      "@app/*": ["src/*"]
     },
     "target": "esnext",
     "module": "commonjs",
@@ -26,5 +26,4 @@
     "skipLibCheck": true
   },
   "filesGlob": ["./src/app.d.ts"],
-
 }

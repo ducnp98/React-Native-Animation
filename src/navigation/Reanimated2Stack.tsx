@@ -3,10 +3,11 @@ import {
   CardStyleInterpolators,
   createStackNavigator,
 } from "@react-navigation/stack";
-import { RootStackParamList } from "navigation/RouteParams";
 import ReanimatedScreen2 from "../screens/Reanimateds2";
 import Scrolling from "../screens/Reanimateds2/Scrolling";
 import MenuBar from "../screens/Reanimateds2/MenuBar";
+import { RootStackParamList } from "./RouteParams";
+import According from "../screens/Reanimateds2/According";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -38,6 +39,11 @@ const Reanimated2Stack = () => {
       <Stack.Screen
         name="MenuBar"
         component={MenuBar}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="According"
+        component={According}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
