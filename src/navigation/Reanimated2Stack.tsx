@@ -6,6 +6,7 @@ import {
 import { RootStackParamList } from "navigation/RouteParams";
 import ReanimatedScreen2 from "../screens/Reanimateds2";
 import Scrolling from "../screens/Reanimateds2/Scrolling";
+import MenuBar from "../screens/Reanimateds2/MenuBar";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -32,6 +33,11 @@ const Reanimated2Stack = () => {
       <Stack.Screen
         name="Scrolling"
         component={Scrolling}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="MenuBar"
+        component={MenuBar}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

@@ -15,10 +15,16 @@ const ReanimatedScreen2 = () => {
     <SafeAreaView className="flex-1 bg-white flex justify-center items-center">
       <ScrollView className="flex-1 w-full px-20 my-4">
         <TouchableOpacity
-          onPress={() => goToScreen('Scrolling')}
+          onPress={() => goToScreen("Scrolling")}
           className={`${buttonStyle} bg-yellow-400`}
         >
           <Text className={textStyle}>Scrolling</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("MenuBar")}
+          className={`${buttonStyle} bg-yellow-500`}
+        >
+          <Text className={textStyle}>MenuBar</Text>
         </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>

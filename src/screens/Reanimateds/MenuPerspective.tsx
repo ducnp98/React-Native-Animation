@@ -1,12 +1,8 @@
 import React, { useCallback } from "react";
 import {
   Dimensions,
-  Platform,
   SafeAreaView,
-  StyleSheet,
-  Text,
   TouchableOpacity,
-  View,
 } from "react-native";
 import {
   GestureHandlerRootView,
