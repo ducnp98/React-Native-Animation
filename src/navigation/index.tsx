@@ -11,6 +11,7 @@ import HomeScreen from "../screens/HomeScreen";
 import ReactHookStack from "./ReactHookStack";
 import NavigationStack from "./NavigationStack";
 import Reanimated2Stack from "./Reanimated2Stack";
+import Spotify from "@app/screens/Spotify";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -58,6 +59,11 @@ const AppNavigation = () => {
           <Stack.Screen
             name="NavigationStack"
             component={NavigationStack}
+            options={{ gestureEnabled: false }}
+          />
+          <Stack.Screen
+            name="Spotify"
+            component={Spotify}
             options={{ gestureEnabled: false }}
           />
         </Stack.Navigator>

@@ -75,6 +75,14 @@ const HomeScreen = () => {
             Reanimated 2
           </Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          className="rounded-lg bg-neutral-900 py-2 px-4 mb-2"
+          onPress={() => {navigate('Spotify')}}
+        >
+          <Text className="text-white text-base font-bold text-center">
+            Spotify
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
