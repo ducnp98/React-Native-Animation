@@ -5,6 +5,7 @@ import ProfileScreen from "../Screens/ProfileScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "../Screens/HomeScreen";
 import LoginScreen from "../Screens/LoginScreen";
+import Detail from "../Screens/Detail";
 
 const Tab = createBottomTabNavigator();
 
@@ -79,6 +80,11 @@ const Navigation = () => {
         name="Main"
         component={BottomTabs}
         options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Detail"
+        component={Detail}
+        options={{ headerShown: true, animation: 'fade', animationDuration: 500 }}
       />
     </Stack.Navigator>
   );
