@@ -77,10 +77,22 @@ const HomeScreen = () => {
         </TouchableOpacity>
         <TouchableOpacity
           className="rounded-lg bg-neutral-900 py-2 px-4 mb-2"
-          onPress={() => {navigate('Spotify')}}
+          onPress={() => {
+            navigate("Spotify");
+          }}
         >
           <Text className="text-white text-base font-bold text-center">
             Spotify
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          className="rounded-lg bg-neutral-800 py-2 px-4 mb-2"
+          onPress={() => {
+            navigate("ShareElementTransition");
+          }}
+        >
+          <Text className="text-white text-base font-bold text-center">
+            Share Element Transition
           </Text>
         </TouchableOpacity>
       </View>
