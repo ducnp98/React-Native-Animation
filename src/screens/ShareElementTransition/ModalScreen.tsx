@@ -1,11 +1,15 @@
 import React from "react";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { ImageProps, Pressable, StyleSheet, Text, View } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { useNavigation } from "@react-navigation/native";
 import Animated, { FadeInDown, FadeInLeft } from "react-native-reanimated";
+import { useRoute } from "@react-navigation/native"
 
-const TabScreen = () => {
+const ModalScreen = () => {
   const { goBack } = useNavigation();
+  const route = useRoute()
+  const { image, sharedTag } = route.params as {image: ImageProps, sharedTag: string};
+
   return (
     <Pressable style={styles.container} onPress={() => goBack()}>
       <BlurView
@@ -16,8 +20,8 @@ const TabScreen = () => {
       />
       <View className="h-full w-full justify-center px-6">
         <Animated.Image
-          sharedTransitionTag="sharedTag"
-          source={require("../Spotify/Image/marilyn.jpg")}
+          sharedTransitionTag={sharedTag}
+          source={image}
           className="w-full h-56 rounded-xl"
           resizeMode="cover"
         />
@@ -51,4 +55,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TabScreen;
+export default ModalScreen;

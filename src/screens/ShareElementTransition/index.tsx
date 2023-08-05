@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 import HomeScreen from "./HomeScreen";
-import TabScreen from "./TabScreen";
+import ModalScreen from "./ModalScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +15,7 @@ const ShareElementTransition = () => {
       />
       <Stack.Screen
         name="Modal"
-        component={TabScreen}
+        component={ModalScreen}
         options={{ presentation: "transparentModal", animation: "fade", headerShown: false }}
       />
     </Stack.Navigator>
