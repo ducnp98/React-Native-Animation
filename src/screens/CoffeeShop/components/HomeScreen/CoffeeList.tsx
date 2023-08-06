@@ -7,7 +7,7 @@ import CoffeeCard from "./CoffeeCard";
 const { width } = Dimensions.get("window");
 
 const CoffeeList = () => {
-  const activeCard = useSharedValue(2)
+  const activeCard = useSharedValue(0)
 
   const scrollHandler = useAnimatedScrollHandler((e: ScrollViewProps) => {
     activeCard.value = Math.max(Math.floor((e.contentOffset?.x ?? 0) / (width - 150)), 0)
