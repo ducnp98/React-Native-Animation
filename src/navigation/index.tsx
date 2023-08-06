@@ -13,12 +13,9 @@ import NavigationStack from "./NavigationStack";
 import Reanimated2Stack from "./Reanimated2Stack";
 import Spotify from "@app/screens/Spotify";
 import ShareElementTransition from "@app/screens/ShareElementTransition";
+import CoffeeShop from "@app/screens/CoffeeShop";
 
 const Stack = createStackNavigator<RootStackParamList>();
-
-const screenOptions = {
-  cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-};
 
 const AppNavigation = () => {
   return (
@@ -27,51 +24,21 @@ const AppNavigation = () => {
         <Stack.Navigator
           initialRouteName="HomeScreen"
           screenOptions={{
-            ...screenOptions,
             headerShown: false,
-            animationEnabled: true,
           }}
         >
-          <Stack.Screen
-            name="HomeScreen"
-            component={HomeScreen}
-            options={{ gestureEnabled: false }}
-          />
-          <Stack.Screen
-            name="AnimatedStack"
-            component={AnimatedStack}
-            options={{ gestureEnabled: false }}
-          />
-          <Stack.Screen
-            name="ReactHookStack"
-            component={ReactHookStack}
-            options={{ gestureEnabled: false }}
-          />
-          <Stack.Screen
-            name="ReanimatedStack"
-            component={ReanimatedStack}
-            options={{ gestureEnabled: false }}
-          />
-          <Stack.Screen
-            name="Reanimated2Stack"
-            component={Reanimated2Stack}
-            options={{ gestureEnabled: false }}
-          />
-          <Stack.Screen
-            name="NavigationStack"
-            component={NavigationStack}
-            options={{ gestureEnabled: false }}
-          />
-          <Stack.Screen
-            name="Spotify"
-            component={Spotify}
-            options={{ gestureEnabled: false }}
-          />
+          <Stack.Screen name="HomeScreen" component={HomeScreen} />
+          <Stack.Screen name="AnimatedStack" component={AnimatedStack} />
+          <Stack.Screen name="ReactHookStack" component={ReactHookStack} />
+          <Stack.Screen name="ReanimatedStack" component={ReanimatedStack} />
+          <Stack.Screen name="Reanimated2Stack" component={Reanimated2Stack} />
+          <Stack.Screen name="NavigationStack" component={NavigationStack} />
+          <Stack.Screen name="Spotify" component={Spotify} />
           <Stack.Screen
             name="ShareElementTransition"
             component={ShareElementTransition}
-            options={{ gestureEnabled: false }}
           />
+          <Stack.Screen name="CoffeeShop" component={CoffeeShop} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
