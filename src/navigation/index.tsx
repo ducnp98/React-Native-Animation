@@ -1,8 +1,5 @@
-import {
-  CardStyleInterpolators,
-  createStackNavigator,
-} from "@react-navigation/stack";
 import React from "react";
+import { createStackNavigator } from "@react-navigation/stack";
 import { RootStackParamList } from "./RouteParams";
 import { NavigationContainer } from "@react-navigation/native";
 import AnimatedStack from "./AnimatedStack";
@@ -14,6 +11,7 @@ import Reanimated2Stack from "./Reanimated2Stack";
 import Spotify from "@app/screens/Spotify";
 import ShareElementTransition from "@app/screens/ShareElementTransition";
 import CoffeeShop from "@app/screens/CoffeeShop";
+import VideoPlayerScreen from "@app/screens/VideoPlayerScreen";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -39,6 +37,7 @@ const AppNavigation = () => {
             component={ShareElementTransition}
           />
           <Stack.Screen name="CoffeeShop" component={CoffeeShop} />
+          <Stack.Screen name="VideoPlayer" component={VideoPlayerScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
