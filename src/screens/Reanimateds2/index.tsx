@@ -32,6 +32,12 @@ const ReanimatedScreen2 = () => {
         >
           <Text className={textStyle}>According</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("OptionSelection")}
+          className={`${buttonStyle} bg-yellow-700`}
+        >
+          <Text className={textStyle}>Option Selection</Text>
+        </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );
