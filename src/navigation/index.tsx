@@ -12,6 +12,7 @@ import Spotify from "@app/screens/Spotify";
 import ShareElementTransition from "@app/screens/ShareElementTransition";
 import CoffeeShop from "@app/screens/CoffeeShop";
 import VideoPlayerScreen from "@app/screens/VideoPlayerScreen";
+import BlurBackground from "@app/screens/BlurBackground";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -38,6 +39,7 @@ const AppNavigation = () => {
           />
           <Stack.Screen name="CoffeeShop" component={CoffeeShop} />
           <Stack.Screen name="VideoPlayer" component={VideoPlayerScreen} />
+          <Stack.Screen name="BlurBackground" component={BlurBackground} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

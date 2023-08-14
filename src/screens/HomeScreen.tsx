@@ -76,10 +76,15 @@ const HomeScreen = () => {
           onPress={() => navigate("CoffeeShop")}
           color="bg-neutral-700"
         />
-          <Button
+        <Button
           title="Video Player"
           onPress={() => navigate("VideoPlayer")}
           color="bg-neutral-600"
+        />
+        <Button
+          title="Blur Background"
+          onPress={() => navigate("BlurBackground")}
+          color="bg-neutral-500"
         />
       </View>
     </View>
