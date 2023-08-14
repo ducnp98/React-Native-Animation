@@ -38,6 +38,12 @@ const ReanimatedScreen2 = () => {
         >
           <Text className={textStyle}>Option Selection</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("DragAndDrop")}
+          className={`${buttonStyle} bg-yellow-800`}
+        >
+          <Text className={textStyle}>Drag and Drop</Text>
+        </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );
