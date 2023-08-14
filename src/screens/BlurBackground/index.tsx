@@ -1,31 +1,73 @@
-import { CommonStyles } from "@app/commons/Styles/CommonStyles";
 import { BlurView } from "@react-native-community/blur";
-import React from "react";
-import {
-  Image,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
-import Animated, { useSharedValue, withSpring } from "react-native-reanimated";
+import React, { useEffect } from "react";
+import { Dimensions, Image, StyleSheet, View } from "react-native";
+import Animated, {
+  Easing,
+  useAnimatedStyle,
+  useSharedValue,
+  withRepeat,
+  withTiming,
+} from "react-native-reanimated";
+
+const HEIGHT = Dimensions.get("screen").height;
 
 const BlurBackground = () => {
-  const modeAnimated = useSharedValue<"light" | "dark">("light");
-  const clearAnimated = useSharedValue<number>(10);
+  const viewTranslateX1 = useSharedValue(50);
+  const viewTranslateY1 = useSharedValue(100);
+  const viewTranslateX2 = useSharedValue(300);
+  const viewTranslateY2 = useSharedValue(HEIGHT - 300);
 
-  const onChangeMode = () => {
-    modeAnimated.value = withSpring(
-      modeAnimated.value === "light" ? "dark" : "light"
+  const view1Style = useAnimatedStyle(() => {
+    return {
+      transform: [
+        { translateX: viewTranslateX1.value },
+        { translateY: viewTranslateY1.value },
+      ],
+    };
+  });
+
+  const view2Style = useAnimatedStyle(() => {
+    return {
+      transform: [
+        { translateX: viewTranslateX2.value },
+        { translateY: viewTranslateY2.value },
+      ],
+    };
+  });
+
+  useEffect(() => {
+    viewTranslateX1.value = withRepeat(
+      withTiming(300, {
+        duration: 10000,
+        easing: Easing.bezier(0.02, 0.39, 0.9, 0.43),
+      }),
+      -1,
+      true
     );
-  };
+    viewTranslateY1.value = withRepeat(
+      withTiming(HEIGHT - 100, {
+        duration: 30000,
+      }),
+      -1,
+      true
+    );
 
-  const onChangeClear = () => {
-    clearAnimated.value = withSpring(clearAnimated.value === 10 ? 60 : 10);
-  };
-
-  const BlurViewAnimatedView = Animated.createAnimatedComponent(BlurView)
+    viewTranslateX2.value = withRepeat(
+      withTiming(50, {
+        duration: 10000,
+        easing: Easing.bezier(0.02, 0.39, 0.9, 0.43),
+      }),
+      -1,
+      true
+    );
+    viewTranslateY2.value = withRepeat(
+      withTiming(100, {
+        duration: 30000,
+      }),
+      -1,
+      true
+    );
+  }, []);
 
   return (
     <View className="flex-1">
@@ -35,21 +77,17 @@ const BlurBackground = () => {
           source={require("./images/wallpaper.jpg")}
           resizeMode="cover"
         />
-        <BlurViewAnimatedView
-          style={styles.absolute}
-          blurType={modeAnimated.value}
-          blurAmount={clearAnimated.value}
-        />
-        <SafeAreaView className="mt-4 mx-4">
-          <View className="flex-row justify-evenly">
-            <TouchableOpacity onPress={onChangeMode} className="w-5/12 bg-white p-3 justify-center items-center rounded-xl">
-              <Text className="text-lg font-medium text-gray-600">Mode</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={onChangeClear} className="w-5/12 bg-white p-3 justify-center items-center rounded-xl">
-              <Text className="text-lg font-medium text-gray-600">Clear</Text>
-            </TouchableOpacity>
-          </View>
-        </SafeAreaView>
+        <View className="absolute w-full h-full">
+          <Animated.View
+            style={view1Style}
+            className="w-36 h-36 bg-rose-600 rounded-full opacity-50"
+          />
+          <Animated.View
+            style={view2Style}
+            className="w-36 h-36 bg-sky-600 rounded-full opacity-50"
+          />
+        </View>
+        <BlurView style={styles.absolute} blurType={"light"} blurAmount={30} />
       </View>
     </View>
   );
