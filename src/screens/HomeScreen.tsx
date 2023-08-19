@@ -86,6 +86,11 @@ const HomeScreen = () => {
           onPress={() => navigate("BlurBackground")}
           color="bg-neutral-500"
         />
+        <Button
+          title="Tinder"
+          onPress={() => navigate("Tinder")}
+          color="bg-neutral-400"
+        />
       </View>
     </View>
   );
