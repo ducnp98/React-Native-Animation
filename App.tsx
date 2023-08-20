@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
 import "react-native-gesture-handler";
 import AppNavigation from "./src/navigation";
+import "./ignoreWarnings";
 
 interface IThemeContext {
   isScrolling: boolean;

@@ -35,61 +35,71 @@ const HomeScreen = () => {
           onPress={() =>
             navigate("AnimatedStack", { screen: "AnimatedScreen" })
           }
-          color="bg-slate-500"
+          color="bg-lime-300"
         />
         <Button
           title="React Hook"
           onPress={() => navigate("ReactHookStack", { screen: "ReactHook" })}
-          color="bg-slate-600"
+          color="bg-lime-400"
         />
         <Button
           title="Reanimated"
           onPress={() =>
             navigate("ReanimatedStack", { screen: "ReanimatedScreen" })
           }
-          color="bg-slate-700"
+          color="bg-lime-500"
         />
         <Button
           title="Navigation"
           onPress={() => navigate("NavigationStack", { screen: "Navigation" })}
-          color="bg-slate-800"
+          color="bg-lime-600"
         />
         <Button
           title="Reanimated 2"
           onPress={() =>
             navigate("Reanimated2Stack", { screen: "Reanimated2Screen" })
           }
-          color="bg-slate-900"
+          color="bg-lime-700"
         />
         <Button
           title="Spotify"
           onPress={() => navigate("Spotify")}
-          color="bg-neutral-900"
+          color="bg-lime-800"
         />
         <Button
           title="Share Element Transition"
           onPress={() => navigate("ShareElementTransition")}
-          color="bg-neutral-800"
+          color="bg-lime-900"
         />
         <Button
           title="CoffeeShop"
           onPress={() => navigate("CoffeeShop")}
-          color="bg-neutral-700"
+          color="bg-lime-950"
         />
         <Button
           title="Video Player"
           onPress={() => navigate("VideoPlayer")}
-          color="bg-neutral-600"
+          color="bg-cyan-950"
         />
         <Button
           title="Blur Background"
           onPress={() => navigate("BlurBackground")}
-          color="bg-neutral-500"
+          color="bg-cyan-900"
         />
         <Button
           title="Tinder"
           onPress={() => navigate("Tinder")}
-          color="bg-neutral-400"
+          color="bg-cyan-800"
+        />
+        <Button
+          title="NeomorphismDemo"
+          onPress={() => navigate("NeomorphismDemo")}
+          color="bg-cyan-700"
+        />
+           <Button
+          title="OTP"
+          onPress={() => navigate("OTP")}
+          color="bg-cyan-600"
         />
       </View>
     </View>

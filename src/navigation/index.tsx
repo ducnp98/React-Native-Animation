@@ -14,6 +14,8 @@ import CoffeeShop from "@app/screens/CoffeeShop";
 import VideoPlayerScreen from "@app/screens/VideoPlayerScreen";
 import BlurBackground from "@app/screens/BlurBackground";
 import Tinder from "@app/screens/Tinder";
+import NeomorphismDemo from "@app/screens/NeomorphismDemo";
+import Otp from "@app/screens/OTP";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -46,6 +48,8 @@ const AppNavigation = () => {
             component={Tinder}
             options={{ gestureEnabled: false }}
           />
+          <Stack.Screen name="NeomorphismDemo" component={NeomorphismDemo} />
+          <Stack.Screen name="OTP" component={Otp} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
