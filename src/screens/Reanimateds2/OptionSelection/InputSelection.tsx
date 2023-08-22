@@ -1,6 +1,8 @@
 import { CommonStyles } from "@app/commons/Styles/CommonStyles";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
+  KeyboardAvoidingView,
+  Platform,
   Pressable,
   Text,
   TextInput,
@@ -14,8 +16,23 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 
+interface Item {
+  id: number;
+  title: string;
+}
+
+const data: Item[] = [
+  { id: 1, title: "This is option 1" },
+  { id: 2, title: "This is option 2" },
+  { id: 3, title: "This is option 3" },
+  { id: 4, title: "This is option 4" },
+  { id: 5, title: "This is option 5" },
+];
+
 const InputSelection = () => {
+  const [optionList, setOptionList] = useState(data);
   const inputAnimated = useSharedValue(false);
+  const dropDownAnimated = useSharedValue(false);
 
   const inputBorderStyle = useAnimatedStyle(() => {
     return {
@@ -41,22 +58,61 @@ const InputSelection = () => {
 
   const extensionStyle = useAnimatedStyle(() => {
     return {
-      height: withTiming(inputAnimated.value ? 150 : 0),
-      opacity: withTiming(inputAnimated.value ? 1 : 0),
-      marginTop: withTiming(inputAnimated.value ? 10 : 0),
-      paddingHorizontal: withTiming(inputAnimated.value ? 16 : 0),
-      paddingVertical: withTiming(inputAnimated.value ? 8 : 0),
+      height: withTiming(
+        dropDownAnimated.value
+          ? optionList.length
+            ? 36 * optionList.length + 16
+            : 36 + 16
+          : 0
+      ),
+      opacity: withTiming(dropDownAnimated.value ? 1 : 0),
+      marginTop: withTiming(dropDownAnimated.value ? 10 : 0),
+      paddingVertical: withTiming(dropDownAnimated.value ? 8 : 0),
     };
   });
 
+  const onFocus = () => {
+    dropDownAnimated.value = true;
+    inputAnimated.value = true;
+  };
+
+  const onBlur = () => {
+    dropDownAnimated.value = false;
+    if (!searchValue) {
+      inputAnimated.value = false;
+    }
+  };
+
+  const [searchValue, setSearchValue] = useState<string>("");
+
+  const onSearch = (text: string) => {
+    setSearchValue(text);
+  };
+
+  useEffect(() => {
+    if (searchValue) {
+      setOptionList(
+        data.filter((x) =>
+          x.title.toLowerCase().includes(searchValue.toLowerCase())
+        )
+      );
+    } else {
+      setOptionList(data);
+    }
+  }, [searchValue]);
+
   return (
-    <View>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+    >
       <Pressable>
         <Animated.View className=" rounded-xl" style={inputBorderStyle}>
           <TextInput
             className="h-10 px-4 "
-            onFocus={() => (inputAnimated.value = true)}
-            onBlur={() => (inputAnimated.value = false)}
+            value={searchValue}
+            onChangeText={onSearch}
+            onFocus={onFocus}
+            onBlur={onBlur}
           />
           <Animated.Text
             className="absolute top-3 left-3 bg-white px-0.5 text-gray-600 font-medium"
@@ -71,19 +127,22 @@ const InputSelection = () => {
         className="w-full rounded-xl border overflow-hidden"
       >
         <FlatList
-          data={Array.from(Array(5), (x, i) => i)}
+          data={optionList}
           renderItem={({ item }) => (
-            <TouchableOpacity className="py-2">
-              <Text className="text-sm text-gray-500">
-                This is option {item}
-              </Text>
+            <TouchableOpacity className="h-9 justify-center px-4">
+              <Text className="text-sm text-gray-500">{item.title}</Text>
             </TouchableOpacity>
           )}
           showsVerticalScrollIndicator={false}
-          keyExtractor={(item) => item.toString()}
+          keyExtractor={(item) => item.id.toString()}
+          ListEmptyComponent={() => (
+            <TouchableOpacity className="h-9 justify-center px-4">
+              <Text className="text-sm text-gray-500">No option</Text>
+            </TouchableOpacity>
+          )}
         />
       </Animated.View>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
