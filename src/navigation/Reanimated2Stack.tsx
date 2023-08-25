@@ -12,6 +12,7 @@ import OptionSelection from "@app/screens/Reanimateds2/OptionSelection";
 import DragAndDrop from "@app/screens/Reanimateds2/DragAndDrop";
 import AddToCart from "@app/screens/Reanimateds2/AddToCart";
 import Twitter from "@app/screens/Reanimateds2/TwitterLike";
+import BKashPayment from "@app/screens/Reanimateds2/BKashPayment";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -68,6 +69,11 @@ const Reanimated2Stack = () => {
       <Stack.Screen
         name="Twitter"
         component={Twitter}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="BKashPayment"
+        component={BKashPayment}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

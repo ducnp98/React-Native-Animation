@@ -11,51 +11,36 @@ const ReanimatedScreen2 = () => {
     navigate(screen);
   };
 
+  const Button = ({
+    title,
+    navigate,
+    color,
+  }: {
+    title: string;
+    navigate: string;
+    color: string;
+  }) => {
+    return (
+      <TouchableOpacity
+        onPress={() => goToScreen(navigate)}
+        className={`${buttonStyle} ${color}`}
+      >
+        <Text className={textStyle}>{title}</Text>
+      </TouchableOpacity>
+    );
+  };
+
   return (
     <SafeAreaView className="flex-1 bg-white flex justify-center items-center">
       <ScrollView className="flex-1 w-full px-20 my-4">
-        <TouchableOpacity
-          onPress={() => goToScreen("Scrolling")}
-          className={`${buttonStyle} bg-yellow-400`}
-        >
-          <Text className={textStyle}>Scrolling</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => goToScreen("MenuBar")}
-          className={`${buttonStyle} bg-yellow-500`}
-        >
-          <Text className={textStyle}>MenuBar</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => goToScreen("According")}
-          className={`${buttonStyle} bg-yellow-600`}
-        >
-          <Text className={textStyle}>According</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => goToScreen("OptionSelection")}
-          className={`${buttonStyle} bg-yellow-700`}
-        >
-          <Text className={textStyle}>Option Selection</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => goToScreen("DragAndDrop")}
-          className={`${buttonStyle} bg-yellow-800`}
-        >
-          <Text className={textStyle}>Drag and Drop</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => goToScreen("AddToCart")}
-          className={`${buttonStyle} bg-yellow-900`}
-        >
-          <Text className={textStyle}>Add to cart</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => goToScreen("Twitter")}
-          className={`${buttonStyle} bg-yellow-950`}
-        >
-          <Text className={textStyle}>Twitter</Text>
-        </TouchableOpacity>
+        <Button title="Scrolling" navigate="Scrolling" color=" bg-yellow-400" />
+        <Button title="MenuBar" navigate="MenuBar" color=" bg-yellow-500" />
+        <Button title="According" navigate="According" color=" bg-yellow-600" />
+        <Button title="Option selection" navigate="OptionSelection" color=" bg-yellow-700" />
+        <Button title="Drag and Drop" navigate="DragAndDrop" color=" bg-yellow-800" />
+        <Button title="Add to cart" navigate="AddToCart" color=" bg-yellow-900" />
+        <Button title="Twitter" navigate="Twitter" color=" bg-yellow-950" />
+        <Button title="BKash Payment" navigate="BKashPayment" color=" bg-red-950" />
       </ScrollView>
     </SafeAreaView>
   );
