@@ -50,6 +50,12 @@ const ReanimatedScreen2 = () => {
         >
           <Text className={textStyle}>Add to cart</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("Twitter")}
+          className={`${buttonStyle} bg-yellow-950`}
+        >
+          <Text className={textStyle}>Twitter</Text>
+        </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );

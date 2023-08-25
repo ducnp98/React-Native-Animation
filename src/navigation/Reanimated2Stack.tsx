@@ -11,6 +11,7 @@ import According from "../screens/Reanimateds2/According";
 import OptionSelection from "@app/screens/Reanimateds2/OptionSelection";
 import DragAndDrop from "@app/screens/Reanimateds2/DragAndDrop";
 import AddToCart from "@app/screens/Reanimateds2/AddToCart";
+import Twitter from "@app/screens/Reanimateds2/TwitterLike";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -62,6 +63,11 @@ const Reanimated2Stack = () => {
       <Stack.Screen
         name="AddToCart"
         component={AddToCart}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Twitter"
+        component={Twitter}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
