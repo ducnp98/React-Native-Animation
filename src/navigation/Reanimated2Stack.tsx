@@ -10,6 +10,7 @@ import { RootStackParamList } from "./RouteParams";
 import According from "../screens/Reanimateds2/According";
 import OptionSelection from "@app/screens/Reanimateds2/OptionSelection";
 import DragAndDrop from "@app/screens/Reanimateds2/DragAndDrop";
+import AddToCart from "@app/screens/Reanimateds2/AddToCart";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -56,6 +57,11 @@ const Reanimated2Stack = () => {
       <Stack.Screen
         name="DragAndDrop"
         component={DragAndDrop}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="AddToCart"
+        component={AddToCart}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

@@ -44,6 +44,12 @@ const ReanimatedScreen2 = () => {
         >
           <Text className={textStyle}>Drag and Drop</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => goToScreen("AddToCart")}
+          className={`${buttonStyle} bg-yellow-900`}
+        >
+          <Text className={textStyle}>Add to cart</Text>
+        </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );
