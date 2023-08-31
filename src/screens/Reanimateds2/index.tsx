@@ -41,6 +41,7 @@ const ReanimatedScreen2 = () => {
         <Button title="Add to cart" navigate="AddToCart" color=" bg-yellow-900" />
         <Button title="Twitter" navigate="Twitter" color=" bg-yellow-950" />
         <Button title="BKash Payment" navigate="BKashPayment" color=" bg-red-950" />
+        <Button title="Pull to refresh" navigate="PullToRefresh" color=" bg-red-900" />
       </ScrollView>
     </SafeAreaView>
   );

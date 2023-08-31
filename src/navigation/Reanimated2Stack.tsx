@@ -13,6 +13,7 @@ import DragAndDrop from "@app/screens/Reanimateds2/DragAndDrop";
 import AddToCart from "@app/screens/Reanimateds2/AddToCart";
 import Twitter from "@app/screens/Reanimateds2/TwitterLike";
 import BKashPayment from "@app/screens/Reanimateds2/BKashPayment";
+import PullToRefresh from "@app/screens/Reanimateds2/PullToRefresh";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -76,6 +77,12 @@ const Reanimated2Stack = () => {
         component={BKashPayment}
         options={{ headerShown: false }}
       />
+      <Stack.Screen
+        name="PullToRefresh"
+        component={PullToRefresh}
+        options={{ headerShown: false }}
+      />
+   
     </Stack.Navigator>
   );
 };
