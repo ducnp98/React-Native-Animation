@@ -14,6 +14,7 @@ import AddToCart from "@app/screens/Reanimateds2/AddToCart";
 import Twitter from "@app/screens/Reanimateds2/TwitterLike";
 import BKashPayment from "@app/screens/Reanimateds2/BKashPayment";
 import PullToRefresh from "@app/screens/Reanimateds2/PullToRefresh";
+import SwipeToDelete from "@app/screens/Reanimateds2/SwipeToDelete";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -82,7 +83,11 @@ const Reanimated2Stack = () => {
         component={PullToRefresh}
         options={{ headerShown: false }}
       />
-   
+      <Stack.Screen
+        name="SwipeToDelete"
+        component={SwipeToDelete}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 };
