@@ -3,9 +3,10 @@ import {
   CardStyleInterpolators,
   createStackNavigator,
 } from "@react-navigation/stack";
-import { RootStackParamList } from "navigation/RouteParams";
+import { RootStackParamList } from "./RouteParams";
 import HOC from "../screens/ReactHook/HOC";
 import ReactHook from "../screens/ReactHook";
+import ReduxSaga from "@app/screens/ReactHook/ReduxSaga";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -32,6 +33,11 @@ const ReactHookStack = () => {
       <Stack.Screen
         name="HOC"
         component={HOC}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ReduxSaga"
+        component={ReduxSaga}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

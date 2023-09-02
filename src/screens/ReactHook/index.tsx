@@ -2,18 +2,43 @@ import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 
+const textStyle = "text-white text-base font-bold text-center";
+
 const ReactHook = () => {
-  const { navigate } = useNavigation()
-  const goToScreen = (screen: string) => {
-    navigate(screen)
-  }
+  const { navigate } = useNavigation();
+
+  const Button = ({
+    title,
+    onPress,
+    color,
+  }: {
+    title: string;
+    onPress: () => void;
+    color: string;
+  }) => {
+    return (
+      <TouchableOpacity
+        className={`rounded-lg py-2 px-4 mb-2 ${color}`}
+        onPress={onPress}
+      >
+        <Text className={textStyle}>{title}</Text>
+      </TouchableOpacity>
+    );
+  };
 
   return (
     <View className="flex-1 bg-white flex justify-center items-center">
       <View>
-      <TouchableOpacity onPress={() => goToScreen('HOC')} className="py-2 px-3 bg-lime-400 rounded-lg mb-2">
-          <Text className="text-white text-base font-bold text-center">Higher order component</Text>
-        </TouchableOpacity>
+        <Button
+          title=" Higher order component"
+          onPress={() => navigate("HOC")}
+          color="bg-lime-400"
+        />
+        <Button
+          title="Redux saga"
+          onPress={() => navigate("ReduxSaga")}
+          color="bg-lime-500"
+        />
       </View>
     </View>
   );

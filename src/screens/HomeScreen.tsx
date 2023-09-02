@@ -96,7 +96,7 @@ const HomeScreen = () => {
           onPress={() => navigate("NeomorphismDemo")}
           color="bg-cyan-700"
         />
-           <Button
+        <Button
           title="OTP"
           onPress={() => navigate("OTP")}
           color="bg-cyan-600"

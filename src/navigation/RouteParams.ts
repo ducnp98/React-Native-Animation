@@ -19,6 +19,7 @@ export interface ReanimatedStack extends ParamListBase {
 
 export interface ReactHookStack extends ParamListBase {
   HigherOrderComponent: undefined;
+  ReduxSaga: undefined;
 }
 
 export interface NavigationStack extends ParamListBase {
