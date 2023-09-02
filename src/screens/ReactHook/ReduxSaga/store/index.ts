@@ -4,10 +4,24 @@ import logger from "redux-logger";
 
 import rootReducer from "./rootReducer";
 import { rootSaga } from "./rootSaga";
+import { configureStore } from "@reduxjs/toolkit";
+import { emptySplitApi } from "../../RTKquery/RTK";
 
-const sagaMiddleware = createSagaMiddleware();
+const reduxSagaMonitorOptions = {}
+export const sagaMiddleware = createSagaMiddleware(reduxSagaMonitorOptions)
 
-const store = createStore(rootReducer, applyMiddleware(sagaMiddleware, logger));
+export const middlewares = [sagaMiddleware, emptySplitApi.middleware]
+
+export const store = configureStore({
+    reducer: rootReducer,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({
+        serializableCheck: { warnAfter: 100 },
+      }).concat(middlewares),
+  })
+  
+
+
 sagaMiddleware.run(rootSaga);
 
 export default store;

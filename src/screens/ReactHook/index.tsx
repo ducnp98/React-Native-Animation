@@ -32,12 +32,17 @@ const ReactHook = () => {
         <Button
           title=" Higher order component"
           onPress={() => navigate("HOC")}
-          color="bg-lime-400"
+          color="bg-cyan-400"
         />
         <Button
           title="Redux saga"
           onPress={() => navigate("ReduxSaga")}
-          color="bg-lime-500"
+          color="bg-cyan-500"
+        />
+        <Button
+          title="RTK Query"
+          onPress={() => navigate("RTKquery")}
+          color="bg-cyan-600"
         />
       </View>
     </View>

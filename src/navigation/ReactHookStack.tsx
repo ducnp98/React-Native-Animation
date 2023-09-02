@@ -7,6 +7,9 @@ import { RootStackParamList } from "./RouteParams";
 import HOC from "../screens/ReactHook/HOC";
 import ReactHook from "../screens/ReactHook";
 import ReduxSaga from "@app/screens/ReactHook/ReduxSaga";
+import RTKquery from "@app/screens/ReactHook/RTKquery";
+import { Provider } from "react-redux";
+import store from "@app/screens/ReactHook/ReduxSaga/store";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -16,31 +19,38 @@ const screenOptions = {
 
 const ReactHookStack = () => {
   return (
-    <Stack.Navigator
-      initialRouteName="ReactHook"
-      screenOptions={{
-        ...screenOptions,
-        headerShown: true,
-        headerTitleAlign: "center",
-        headerBackTitleVisible: true,
-      }}
-    >
-      <Stack.Screen
-        name="ReactHook"
-        component={ReactHook}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="HOC"
-        component={HOC}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="ReduxSaga"
-        component={ReduxSaga}
-        options={{ headerShown: false }}
-      />
-    </Stack.Navigator>
+    <Provider store={store}>
+      <Stack.Navigator
+        initialRouteName="ReactHook"
+        screenOptions={{
+          ...screenOptions,
+          headerShown: true,
+          headerTitleAlign: "center",
+          headerBackTitleVisible: true,
+        }}
+      >
+        <Stack.Screen
+          name="ReactHook"
+          component={ReactHook}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="HOC"
+          component={HOC}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="ReduxSaga"
+          component={ReduxSaga}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="RTKquery"
+          component={RTKquery}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+    </Provider>
   );
 };
 
