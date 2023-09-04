@@ -21,6 +21,7 @@ export interface ReactHookStack extends ParamListBase {
   HigherOrderComponent: undefined;
   ReduxSaga: undefined;
   RTKquery: undefined;
+  FormikForm: undefined;
 }
 
 export interface NavigationStack extends ParamListBase {
