@@ -49,6 +49,11 @@ const ReactHook = () => {
           onPress={() => navigate("FormikForm")}
           color="bg-cyan-700"
         />
+        <Button
+          title="Custom Hook"
+          onPress={() => navigate("CustomHook")}
+          color="bg-cyan-800"
+        />
       </View>
     </View>
   );

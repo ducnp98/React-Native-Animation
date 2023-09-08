@@ -10,6 +10,7 @@ import {
   TextInput,
   View,
   Animated,
+  Platform,
 } from "react-native";
 
 const WINDOW_HEIGHT = Dimensions.get("window").height;
@@ -37,7 +38,7 @@ const HeaderMomo = () => {
       {
         translateX: animatedValue.interpolate({
           inputRange: [0, 25], // nghi la no chi can scroll 25px thi no se ket thuc viec di chuyen sang ben trai hoac phai
-          outputRange: [0, -100],  // sau khi keu du 25px thi no se dung toi vi tri -100
+          outputRange: [0, -100], // sau khi keu du 25px thi no se dung toi vi tri -100
           extrapolate: "clamp",
         }),
       },
@@ -160,7 +161,9 @@ const HeaderMomo = () => {
 
   return (
     <View className="flex-1">
-      <StatusBar barStyle="light-content" backgroundColor="#ed4899" />
+      {Platform.OS === "android" ? (
+        <StatusBar barStyle="light-content" backgroundColor="#ed4899" />
+      ) : null}
       <SafeAreaView>
         <View style={{ height: UPPER_HEADER }} />
       </SafeAreaView>

@@ -11,6 +11,7 @@ import RTKquery from "@app/screens/ReactHook/RTKquery";
 import { Provider } from "react-redux";
 import store from "@app/screens/ReactHook/ReduxSaga/store";
 import FormikForm from "@app/screens/ReactHook/FormikForm";
+import CustomHook from "@app/screens/ReactHook/CustomHook";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -53,6 +54,11 @@ const ReactHookStack = () => {
         <Stack.Screen
           name="FormikForm"
           component={FormikForm}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="CustomHook"
+          component={CustomHook}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
