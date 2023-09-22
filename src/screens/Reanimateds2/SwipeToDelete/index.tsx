@@ -12,6 +12,7 @@ const SwipeToDelete = () => {
   const scrollRef = useRef(null);
   const [selectedBlock, setSelectedBlock] = useState(-1);
   const [isScrolling, setIsScrolling] = useState(false);
+
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaView>
