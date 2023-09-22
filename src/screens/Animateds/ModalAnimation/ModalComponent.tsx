@@ -46,7 +46,7 @@ const ModalComponent: React.FC<ModalProps> = ({
   };
 
   return isVisible ? (
-    <TouchableWithoutFeedback>
+    <TouchableWithoutFeedback onPress={handleClose}>
       <Animated.View style={[styles.container, containerAnimation]}>
         <View style={[styles.modal]}>
           <View style={styles.header}>
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     zIndex: 9999999,
-    backgroundColor: "rgba(0, 0, 0, 0.7)",
+    backgroundColor: "#c6c6c6",
   },
   modal: {
     width: "80%",

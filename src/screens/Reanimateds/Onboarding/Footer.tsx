@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Dimensions, Text, TouchableOpacity, View } from "react-native";
 import { slides } from ".";
+import Animated, {
+  useAnimatedStyle,
+  useSharedValue,
+  withSpring,
+} from "react-native-reanimated";
 
-const { height } = Dimensions.get("window");
+const { height, width } = Dimensions.get("window");
 
 const buttonClass =
-  "flex-1 h-12 rounded-sm bg-white justify-center items-center";
+  "flex-1 h-12 rounded-xl bg-white justify-center items-center";
 
 type Props = {
   currentSlideIndex: number;
@@ -18,6 +23,28 @@ const Footer: React.FC<Props> = ({
   skip,
   currentSlideIndex,
 }) => {
+  const isGetStatedButton = useSharedValue(true);
+
+  const getStatedButtonAnimated = useAnimatedStyle(() => {
+    return {
+      transform: [
+        { translateX: withSpring(isGetStatedButton.value ? 0 : width) },
+      ],
+    };
+  });
+
+  const actionButtonAnimated = useAnimatedStyle(() => {
+    return {
+      transform: [
+        { translateX: withSpring(isGetStatedButton.value ? -width : 0) },
+      ],
+    };
+  });
+
+  useEffect(() => {
+    isGetStatedButton.value = currentSlideIndex == slides.length - 1;
+  }, [currentSlideIndex, slides.length]);
+
   return (
     <View
       style={{
@@ -48,31 +75,28 @@ const Footer: React.FC<Props> = ({
       </View>
 
       <View style={{ marginBottom: 20 }}>
-        {currentSlideIndex == slides.length - 1 ? (
-          <View className="h-12">
-            <TouchableOpacity className={buttonClass} onPress={() => {}}>
-              <Text className="font-bold text-base">GET STARTED</Text>
-            </TouchableOpacity>
-          </View>
-        ) : (
-          <View className="flex-row">
-            <TouchableOpacity
-              activeOpacity={0.8}
-              className={`${buttonClass} border-white border bg-transparent`}
-              onPress={skip}
-            >
-              <Text className="font-bold text-base text-white">SKIP</Text>
-            </TouchableOpacity>
-            <View className="w-4" />
-            <TouchableOpacity
-              activeOpacity={0.8}
-              className={buttonClass}
-              onPress={goToNextSlide}
-            >
-              <Text className="font-bold text-base">NEXT</Text>
-            </TouchableOpacity>
-          </View>
-        )}
+        <Animated.View className="h-12 absolute w-full" style={getStatedButtonAnimated}>
+          <TouchableOpacity className={buttonClass} onPress={() => {}}>
+            <Text className="font-bold text-base">GET STARTED</Text>
+          </TouchableOpacity>
+        </Animated.View>
+        <Animated.View className="flex-row" style={actionButtonAnimated}>
+          <TouchableOpacity
+            activeOpacity={0.8}
+            className={`${buttonClass} border-white border bg-transparent`}
+            onPress={skip}
+          >
+            <Text className="font-bold text-base text-white">SKIP</Text>
+          </TouchableOpacity>
+          <View className="w-4" />
+          <TouchableOpacity
+            activeOpacity={0.8}
+            className={buttonClass}
+            onPress={goToNextSlide}
+          >
+            <Text className="font-bold text-base">NEXT</Text>
+          </TouchableOpacity>
+        </Animated.View>
       </View>
     </View>
   );

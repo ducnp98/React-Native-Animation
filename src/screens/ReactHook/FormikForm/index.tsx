@@ -5,12 +5,14 @@ import {
   KeyboardAvoidingView,
   Platform,
   View,
-  Button,
   SafeAreaView,
+  Text,
+  Alert,
 } from "react-native";
 
 import validationSchema from "./validationSchema";
 import InputCustom from "./InputCustom";
+import { TouchableOpacity } from "react-native";
 
 const initialValues = {
   email: "",
@@ -19,7 +21,7 @@ const initialValues = {
 
 const FormikForm = () => {
   const onSubmit = (values: any) => {
-    console.log("value", values);
+    Alert.alert(`Email: ${values.email} ---- Password: ${values.password}`);
   };
 
   const formik = useFormik({
@@ -39,7 +41,7 @@ const FormikForm = () => {
   } = formik;
 
   return (
-    <SafeAreaView className="flex-1">
+    <SafeAreaView className="flex-1 mt-6">
       <KeyboardAvoidingView
         enabled
         className="flex-1"
@@ -61,11 +63,13 @@ const FormikForm = () => {
               isTouched={touched.password ?? false}
               error={errors.password ?? ""}
             />
-            <Button
-              title="Sign in"
+            <TouchableOpacity
               onPress={handleSubmit}
               disabled={!isValid}
-            />
+              className="w-full h-12 bg-cyan-500 rounded-lg my-3 flex items-center justify-center"
+            >
+              <Text className="text-white text-lg font-bold">Sign in</Text>
+            </TouchableOpacity>
           </View>
         </ScrollView>
       </KeyboardAvoidingView>

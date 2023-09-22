@@ -10,7 +10,6 @@ export function HOCcomponent<T>(OriginalComponent: ComponentType<T>) {
 
     return (
       <View>
-        <Text>Hellooo</Text>
         <OriginalComponent
           {...(hocType as T)}
           money={money}

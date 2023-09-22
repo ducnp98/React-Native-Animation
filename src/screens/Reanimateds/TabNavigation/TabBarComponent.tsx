@@ -20,6 +20,7 @@ const TabBarComponent = ({
   onPress,
 }: TabBarComponentProps) => {
   const ref = useRef(null);
+  console.log('option', active)
 
   useEffect(() => {
     if (active && ref.current) {

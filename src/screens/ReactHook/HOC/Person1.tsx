@@ -12,7 +12,7 @@ function Person1({
   return (
     <View className="my-3 flex items-center">
       <Text className="text-lg font-bold text-gray-500">
-        This is Jim {money}
+        This is Miley {money}
       </Text>
       <TouchableOpacity
         onPress={onIncrease}

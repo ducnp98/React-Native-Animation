@@ -14,7 +14,6 @@ type ListItemProps = {
 
 const ListItem: React.FC<ListItemProps> = React.memo(
   ({ item, viewableItems }) => {
-    console.log('render', item.id);
     const rStyle = useAnimatedStyle(() => {
       const isVisible = Boolean(
         viewableItems.value
@@ -34,7 +33,7 @@ const ListItem: React.FC<ListItemProps> = React.memo(
 
     return (
       <Animated.View
-        className="h-20 w-9/12 bg-purple-300 self-center rounded-r-lg mt-8"
+        className="h-20 w-9/12 bg-purple-300 self-center rounded-lg mt-4"
         style={rStyle}
       />
     );

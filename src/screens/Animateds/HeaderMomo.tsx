@@ -1,4 +1,3 @@
-import DraggableBottomSheet from "./DraggableBottomSheet";
 import MyIcon from "../../commons/MyIcon";
 import React, { useRef } from "react";
 import {
@@ -292,7 +291,6 @@ const HeaderMomo = () => {
         <View className="h-24" />
         <View className="bg-white" style={{ height: WINDOW_HEIGHT * 2 }}></View>
       </ScrollView>
-      <DraggableBottomSheet />
     </View>
   );
 };
