@@ -16,6 +16,7 @@ import BKashPayment from "@app/screens/Reanimateds2/BKashPayment";
 import PullToRefresh from "@app/screens/Reanimateds2/PullToRefresh";
 import SwipeToDelete from "@app/screens/Reanimateds2/SwipeToDelete";
 import Onboarding from "@app/screens/Reanimateds2/Onboarding";
+import NotionHeader from "@app/screens/Reanimateds2/NotionHeader";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -92,6 +93,11 @@ const Reanimated2Stack = () => {
       <Stack.Screen
         name="Onboarding"
         component={Onboarding}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="NotionHeader"
+        component={NotionHeader}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
