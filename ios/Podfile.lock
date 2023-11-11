@@ -366,6 +366,8 @@ PODS:
     - React-perflogger (= 0.68.2)
   - ReactNativeART (1.2.0):
     - React
+  - RNFlashList (1.6.3):
+    - React-Core
   - RNGestureHandler (2.10.0):
     - React-Core
   - RNReactNativeHapticFeedback (2.0.3):
@@ -471,6 +473,7 @@ DEPENDENCIES:
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "ReactNativeART (from `../node_modules/@react-native-community/art`)"
+  - "RNFlashList (from `../node_modules/@shopify/flash-list`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReactNativeHapticFeedback (from `../node_modules/react-native-haptic-feedback`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
@@ -573,6 +576,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   ReactNativeART:
     :path: "../node_modules/@react-native-community/art"
+  RNFlashList:
+    :path: "../node_modules/@shopify/flash-list"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNReactNativeHapticFeedback:
@@ -640,6 +645,7 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: b960b687d2dfef0d3761fbb187e01812ebab8b23
   ReactCommon: 095366164a276d91ea704ce53cb03825c487a3f2
   ReactNativeART: 78edc68dd4a1e675338cd0cd113319cf3a65f2ab
+  RNFlashList: 4b4b6b093afc0df60ae08f9cbf6ccd4c836c667a
   RNGestureHandler: e145476da655f3dbc48ef2f0a08cf7a34338c02b
   RNReactNativeHapticFeedback: afa5bf2794aecbb2dba2525329253da0d66656df
   RNReanimated: 39ddeefd7260ae216ce86a71320a8e842e7f206b
@@ -652,4 +658,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: f05151937ab7be8cd5ba1c4e43fcccab75690798
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.13.0

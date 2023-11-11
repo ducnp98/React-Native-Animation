@@ -45,6 +45,7 @@ const ReanimatedScreen2 = () => {
         <Button title="Swipe to delete" navigate="SwipeToDelete" color=" bg-red-800" />
         <Button title="Onboarding" navigate="Onboarding" color=" bg-red-700" />
         <Button title="Notion header" navigate="NotionHeader" color=" bg-red-600" />
+        <Button title="Menu catagories" navigate="MenuCatagories" color=" bg-red-500" />
       </ScrollView>
     </SafeAreaView>
   );
