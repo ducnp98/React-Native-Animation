@@ -46,6 +46,7 @@ const ReanimatedScreen2 = () => {
         <Button title="Onboarding" navigate="Onboarding" color=" bg-red-700" />
         <Button title="Notion header" navigate="NotionHeader" color=" bg-red-600" />
         <Button title="Menu catagories" navigate="MenuCatagories" color=" bg-red-500" />
+        <Button title="Food recipe" navigate="FoodRecipe" color=" bg-red-400" />
       </ScrollView>
     </SafeAreaView>
   );

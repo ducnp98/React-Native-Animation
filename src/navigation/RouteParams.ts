@@ -32,6 +32,12 @@ export interface Reanimated2Stack extends ParamListBase {
   Reanimated2Screen: undefined;
 }
 
+export type FoodRecipeStack = {
+  WelcomeScreen: undefined;
+  HomeScreen: undefined;
+  Detail: { item: any };
+};
+
 export interface RootStackParamList extends ParamListBase {
   AnimatedStack: NavigatorScreenParams<AnimatedStack>;
   ReanimatedStack: NavigatorScreenParams<ReanimatedStack>;
@@ -39,8 +45,8 @@ export interface RootStackParamList extends ParamListBase {
   ReactHookStack: NavigatorScreenParams<ReactHookStack>;
   NavigationStack: NavigatorScreenParams<NavigationStack>;
   HomeScreen: undefined;
+  FoodRecipeStack: NavigatorScreenParams<FoodRecipeStack>;
 }
-
 
 export type AllScreenParamList = RootStackParamList &
   AnimatedStack &
