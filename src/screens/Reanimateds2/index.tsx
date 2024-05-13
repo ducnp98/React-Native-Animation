@@ -48,6 +48,7 @@ const ReanimatedScreen2 = () => {
         <Button title="Menu catagories" navigate="MenuCatagories" color=" bg-red-500" />
         <Button title="Food recipe" navigate="FoodRecipe" color=" bg-red-400" />
         <Button title="Alert" navigate="Alert" color=" bg-red-300" />
+        <Button title="Carousel" navigate="Carousel" color=" bg-red-200" />
       </ScrollView>
     </SafeAreaView>
   );

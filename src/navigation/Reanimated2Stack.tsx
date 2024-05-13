@@ -20,6 +20,7 @@ import NotionHeader from "@app/screens/Reanimateds2/NotionHeader";
 import MenuCatagories from "@app/screens/Reanimateds2/MenuCatagories";
 import FoodRecipeStackNavigation from "./FoodRecipeStack";
 import Alert from "@app/screens/Reanimateds2/Alert";
+import Carousel from "@app/screens/Reanimateds2/Carousel";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -116,6 +117,11 @@ const Reanimated2Stack = () => {
       <Stack.Screen
         name="Alert"
         component={Alert}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Carousel"
+        component={Carousel}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
