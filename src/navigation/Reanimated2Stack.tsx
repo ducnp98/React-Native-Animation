@@ -18,8 +18,8 @@ import SwipeToDelete from "@app/screens/Reanimateds2/SwipeToDelete";
 import Onboarding from "@app/screens/Reanimateds2/Onboarding";
 import NotionHeader from "@app/screens/Reanimateds2/NotionHeader";
 import MenuCatagories from "@app/screens/Reanimateds2/MenuCatagories";
-import FoodRecipe from "@app/screens/Reanimateds2/FoodRecipe";
 import FoodRecipeStackNavigation from "./FoodRecipeStack";
+import Alert from "@app/screens/Reanimateds2/Alert";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -111,6 +111,11 @@ const Reanimated2Stack = () => {
       <Stack.Screen
         name="FoodRecipe"
         component={FoodRecipeStackNavigation}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Alert"
+        component={Alert}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
