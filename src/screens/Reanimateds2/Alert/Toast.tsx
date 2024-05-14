@@ -16,6 +16,7 @@ import Animated, {
   withSpring,
   withTiming,
 } from "react-native-reanimated";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 type ToastType = "success" | "error" | "info";
 
@@ -26,11 +27,12 @@ interface ToastRef {
 }
 
 const Toast = forwardRef(({}, ref) => {
+  const insets = useSafeAreaInsets()
   const [type, setType] = useState("error");
   const [message, setMessage] = useState("This is message testing");
   const [isShowToast, setIsShowToast] = useState(true);
   const context = useSharedValue(0);
-  const toastTopAnimation = useSharedValue(-100);
+  const toastTopAnimation = useSharedValue(-150);
 
   const show = useCallback(
     (type: ToastType) => (message: string, duration?: number) => {
@@ -42,7 +44,7 @@ const Toast = forwardRef(({}, ref) => {
           withTiming(0),
           withDelay(
             duration ?? 3000,
-            withTiming(-100, { duration: 500 }, (finish) => {
+            withTiming(-150, { duration: 500 }, (finish) => {
               if (finish) {
                 runOnJS(setIsShowToast)(false);
               }
@@ -55,7 +57,7 @@ const Toast = forwardRef(({}, ref) => {
   );
 
   const close = async (func?: () => void) => {
-    toastTopAnimation.value = withTiming(-100, { duration: 500 }, (finish) => {
+    toastTopAnimation.value = withTiming(-150, { duration: 500 }, (finish) => {
       if (finish && func) {
         runOnJS(setIsShowToast)(false);
         runOnJS(func)();
@@ -116,7 +118,7 @@ const Toast = forwardRef(({}, ref) => {
           withTiming(0),
           withDelay(
             3000,
-            withTiming(-100, { duration: 500 }, (finish) => {
+            withTiming(-150, { duration: 500 }, (finish) => {
               if (finish) {
                 runOnJS(setIsShowToast)(false);
               }
@@ -125,7 +127,7 @@ const Toast = forwardRef(({}, ref) => {
         );
       } else {
         toastTopAnimation.value = withSpring(
-          -100,
+          -150,
           {
             stiffness: 100,
             damping: 500,
@@ -144,8 +146,8 @@ const Toast = forwardRef(({}, ref) => {
   return (
     <GestureDetector gesture={pan}>
       <Animated.View
-        style={alertContainerStyle}
-        className="flex items-center absolute top-0 w-11/12 "
+        style={[alertContainerStyle, {marginTop: insets.top || 16}]}
+        className="flex items-center absolute top-0 w-11/12"
       >
         <View
           className={`flex-row items-center border mt-4 p-2  rounded-xl w-full `}

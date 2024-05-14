@@ -16,6 +16,7 @@ import BlurBackground from "@app/screens/BlurBackground";
 import Tinder from "@app/screens/Tinder";
 import NeomorphismDemo from "@app/screens/NeomorphismDemo";
 import Otp from "@app/screens/OTP";
+import Bridge from "@app/screens/Bridge";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -50,6 +51,7 @@ const AppNavigation = () => {
           />
           <Stack.Screen name="NeomorphismDemo" component={NeomorphismDemo} />
           <Stack.Screen name="OTP" component={Otp} />
+          <Stack.Screen name="Bridge" component={Bridge} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
