@@ -13,6 +13,8 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-PracticeReactNative-PracticeReactNativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-PracticeReactNative-PracticeReactNativeTests.a */; };
+		7F494FF72BF332F200333A97 /* BridgeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F494FF62BF332F200333A97 /* BridgeModule.swift */; };
+		7F494FFF2BF334FB00333A97 /* BridgeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F494FFE2BF334FB00333A97 /* BridgeModule.m */; };
 		7F75A7E12A6AFDE100BC103D /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 7F75A7E02A6AFDE100BC103D /* Fonts */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,9 @@
 		5709B34CF0A7D63546082F79 /* Pods-PracticeReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeReactNative.release.xcconfig"; path = "Target Support Files/Pods-PracticeReactNative/Pods-PracticeReactNative.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-PracticeReactNative-PracticeReactNativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeReactNative-PracticeReactNativeTests.debug.xcconfig"; path = "Target Support Files/Pods-PracticeReactNative-PracticeReactNativeTests/Pods-PracticeReactNative-PracticeReactNativeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-PracticeReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PracticeReactNative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F494FF52BF332F100333A97 /* PracticeReactNative-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PracticeReactNative-Bridging-Header.h"; sourceTree = "<group>"; };
+		7F494FF62BF332F200333A97 /* BridgeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeModule.swift; sourceTree = "<group>"; };
+		7F494FFE2BF334FB00333A97 /* BridgeModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeModule.m; sourceTree = "<group>"; };
 		7F75A7E02A6AFDE100BC103D /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PracticeReactNative/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-PracticeReactNative-PracticeReactNativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeReactNative-PracticeReactNativeTests.release.xcconfig"; path = "Target Support Files/Pods-PracticeReactNative-PracticeReactNativeTests/Pods-PracticeReactNative-PracticeReactNativeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +100,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				7F494FF62BF332F200333A97 /* BridgeModule.swift */,
+				7F494FF52BF332F100333A97 /* PracticeReactNative-Bridging-Header.h */,
+				7F494FFE2BF334FB00333A97 /* BridgeModule.m */,
 			);
 			name = PracticeReactNative;
 			sourceTree = "<group>";
@@ -210,7 +218,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1530;
 					};
 				};
 			};
@@ -414,7 +422,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F494FFF2BF334FB00333A97 /* BridgeModule.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				7F494FF72BF332F200333A97 /* BridgeModule.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-PracticeReactNative-PracticeReactNativeTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -461,6 +472,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-PracticeReactNative-PracticeReactNativeTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = PracticeReactNativeTests/Info.plist;
@@ -501,6 +513,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PracticeReactNative;
+				SWIFT_OBJC_BRIDGING_HEADER = "PracticeReactNative-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -526,6 +539,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PracticeReactNative;
+				SWIFT_OBJC_BRIDGING_HEADER = "PracticeReactNative-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

@@ -101,6 +101,11 @@ const HomeScreen = () => {
           onPress={() => navigate("OTP")}
           color="bg-cyan-600"
         />
+        <Button
+          title="Bridge"
+          onPress={() => navigate("Bridge")}
+          color="bg-cyan-500"
+        />
       </View>
     </View>
   );
