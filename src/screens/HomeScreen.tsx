@@ -1,12 +1,15 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const textStyle = "text-white text-base font-bold text-center";
 
 const HomeScreen = () => {
   const { navigate } = useNavigation();
+
+  const insets = useSafeAreaInsets();
 
   const Button = ({
     title,
@@ -29,7 +32,7 @@ const HomeScreen = () => {
 
   return (
     <View className="flex-1 bg-white flex justify-center items-center">
-      <View>
+      <ScrollView style={{ paddingTop: insets.top || 16 }}>
         <Button
           title="Animated"
           onPress={() =>
@@ -111,7 +114,12 @@ const HomeScreen = () => {
           onPress={() => navigate("CustomGalleryPicker")}
           color="bg-cyan-400"
         />
-      </View>
+        <Button
+          title="Live Chart"
+          onPress={() => navigate("LiveChart")}
+          color="bg-cyan-300"
+        />
+      </ScrollView>
     </View>
   );
 };
