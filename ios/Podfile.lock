@@ -290,9 +290,11 @@ PODS:
     - glog
   - react-native-blur (4.3.2):
     - React-Core
+  - react-native-cameraroll (5.6.0):
+    - React-Core
   - react-native-pager-view (6.2.0):
     - React-Core
-  - react-native-safe-area-context (4.7.1):
+  - react-native-safe-area-context (4.10.1):
     - React-Core
   - react-native-video (5.2.1):
     - React-Core
@@ -376,7 +378,7 @@ PODS:
     - React-Core
   - RNReactNativeHapticFeedback (2.0.3):
     - React-Core
-  - RNReanimated (3.5.0):
+  - RNReanimated (3.11.0):
     - DoubleConversion
     - FBLazyVector
     - FBReactNativeSpec
@@ -463,6 +465,7 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - "react-native-blur (from `../node_modules/@react-native-community/blur`)"
+  - "react-native-cameraroll (from `../node_modules/@react-native-camera-roll/camera-roll`)"
   - react-native-pager-view (from `../node_modules/react-native-pager-view`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-video (from `../node_modules/react-native-video`)
@@ -553,6 +556,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/logger"
   react-native-blur:
     :path: "../node_modules/@react-native-community/blur"
+  react-native-cameraroll:
+    :path: "../node_modules/@react-native-camera-roll/camera-roll"
   react-native-pager-view:
     :path: "../node_modules/react-native-pager-view"
   react-native-safe-area-context:
@@ -644,8 +649,9 @@ SPEC CHECKSUMS:
   React-jsinspector: c5989c77cb89ae6a69561095a61cce56a44ae8e8
   React-logger: a0833912d93b36b791b7a521672d8ee89107aff1
   react-native-blur: cfdad7b3c01d725ab62a8a729f42ea463998afa2
+  react-native-cameraroll: 755bcc628148a90a7c9cf3f817a252be3a601bc5
   react-native-pager-view: 0ccb8bf60e2ebd38b1f3669fa3650ecce81db2df
-  react-native-safe-area-context: 9697629f7b2cda43cf52169bb7e0767d330648c2
+  react-native-safe-area-context: dcab599c527c2d7de2d76507a523d20a0b83823d
   react-native-video: c26780b224543c62d5e1b2a7244a5cd1b50e8253
   react-native-webview: b2a3768417e497b76ebb2ef1eff3563d2446d3e7
   React-perflogger: a18b4f0bd933b8b24ecf9f3c54f9bf65180f3fe6
@@ -665,7 +671,7 @@ SPEC CHECKSUMS:
   RNFlashList: 4b4b6b093afc0df60ae08f9cbf6ccd4c836c667a
   RNGestureHandler: e145476da655f3dbc48ef2f0a08cf7a34338c02b
   RNReactNativeHapticFeedback: afa5bf2794aecbb2dba2525329253da0d66656df
-  RNReanimated: 39ddeefd7260ae216ce86a71320a8e842e7f206b
+  RNReanimated: 4d6eefb69dc70c65b0ee62b6a99490d077a37bbc
   RNScreens: 218801c16a2782546d30bd2026bb625c0302d70f
   RNSharedElement: 3fd05877bd6bc95f71b332801bf4356ca69ab7f6
   RNSVG: 80584470ff1ffc7994923ea135a3e5ad825546b9
@@ -674,6 +680,6 @@ SPEC CHECKSUMS:
   Yoga: 99652481fcd320aefa4a7ef90095b95acd181952
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 8fb35bf33541a67124a84a71de3e6f5f97cf83e3
+PODFILE CHECKSUM: ff8d2d5d1b3818afadcc19526a9ba37be5ff17a7
 
 COCOAPODS: 1.11.3

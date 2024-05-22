@@ -17,6 +17,7 @@ import Tinder from "@app/screens/Tinder";
 import NeomorphismDemo from "@app/screens/NeomorphismDemo";
 import Otp from "@app/screens/OTP";
 import Bridge from "@app/screens/Bridge";
+import CustomGalleryPicker from "@app/screens/CustomGalleryPicker";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -52,6 +53,7 @@ const AppNavigation = () => {
           <Stack.Screen name="NeomorphismDemo" component={NeomorphismDemo} />
           <Stack.Screen name="OTP" component={Otp} />
           <Stack.Screen name="Bridge" component={Bridge} />
+          <Stack.Screen name="CustomGalleryPicker" component={CustomGalleryPicker} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

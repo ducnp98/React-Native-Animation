@@ -106,6 +106,11 @@ const HomeScreen = () => {
           onPress={() => navigate("Bridge")}
           color="bg-cyan-500"
         />
+        <Button
+          title="Custom Gallery Picker"
+          onPress={() => navigate("CustomGalleryPicker")}
+          color="bg-cyan-400"
+        />
       </View>
     </View>
   );
