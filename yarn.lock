@@ -7098,6 +7098,11 @@ react-native-codegen@^0.0.17:
     jscodeshift "^0.13.1"
     nullthrows "^1.1.1"
 
+react-native-echarts-pro@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/react-native-echarts-pro/-/react-native-echarts-pro-1.9.1.tgz#5e084a8747ff5d893bb395c873899e0bed81ebc4"
+  integrity sha512-rKZ1cpq9LF/zKTS13wFQJj5ejBEJ9n5t+MWqdPYZuiM/KP3aUqOWIDSeXAwVi6wBHk7kjVX5sYwA2BFrZGgtBQ==
+
 react-native-gesture-handler@^2.9.0:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-2.10.0.tgz#54a1840cccac1dc4d5a48b8dc703eac30f077b3d"

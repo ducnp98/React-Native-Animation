@@ -18,6 +18,7 @@ import NeomorphismDemo from "@app/screens/NeomorphismDemo";
 import Otp from "@app/screens/OTP";
 import Bridge from "@app/screens/Bridge";
 import CustomGalleryPicker from "@app/screens/CustomGalleryPicker";
+import LiveChart from "@app/screens/LiveChart";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -54,6 +55,7 @@ const AppNavigation = () => {
           <Stack.Screen name="OTP" component={Otp} />
           <Stack.Screen name="Bridge" component={Bridge} />
           <Stack.Screen name="CustomGalleryPicker" component={CustomGalleryPicker} />
+          <Stack.Screen name="LiveChart" component={LiveChart} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
