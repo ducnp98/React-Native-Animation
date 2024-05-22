@@ -1,4 +1,5 @@
 apply plugin: "com.android.application"
+apply plugin: "com.facebook.react"
 
 import com.android.build.OutputFile
 import org.apache.tools.ant.taskdefs.condition.Os
@@ -82,7 +83,7 @@ project.ext.react = [
     enableHermes: false,  // clean and rebuild if changing
 ]
 
-apply from: "../../node_modules/react-native/react.gradle"
+// apply from: "../../node_modules/react-native/react.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -164,6 +165,9 @@ android {
                         arguments "NDK_APP_SHORT_COMMANDS=true"
                     }
                 }
+                cmake {
+                    version "3.29.3"
+                }
             }
             if (!enableSeparateBuildPerCPUArchitecture) {
                 ndk {
@@ -178,6 +182,9 @@ android {
         externalNativeBuild {
             ndkBuild {
                 path "$projectDir/src/main/jni/Android.mk"
+            }
+            cmake {
+                version "3.29.3"
             }
         }
         def reactAndroidProjectDir = project(':ReactAndroid').projectDir
