@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "177133055987",
+    "project_id": "react-native-animation-256cd",
+    "storage_bucket": "react-native-animation-256cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177133055987:android:a68089d0446166c4b92c86",
+        "android_client_info": {
+          "package_name": "com.practicereactnative"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnieHCbb0s_5b0lMtlvZH-q_-YsQ8Zpfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

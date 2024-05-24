@@ -32,7 +32,7 @@ const HomeScreen = () => {
 
   return (
     <View className="flex-1 bg-white flex justify-center items-center">
-      <ScrollView style={{ paddingTop: insets.top || 16 }}>
+      <ScrollView style={{ paddingTop: insets.top || 16 }} showsVerticalScrollIndicator={false}>
         <Button
           title="Animated"
           onPress={() =>
@@ -118,6 +118,11 @@ const HomeScreen = () => {
           title="Live Chart"
           onPress={() => navigate("LiveChart")}
           color="bg-cyan-300"
+        />
+        <Button
+          title="Local Notification"
+          onPress={() => navigate("LocalNotification")}
+          color="bg-cyan-200"
         />
       </ScrollView>
     </View>

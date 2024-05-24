@@ -19,6 +19,7 @@ import Otp from "@app/screens/OTP";
 import Bridge from "@app/screens/Bridge";
 import CustomGalleryPicker from "@app/screens/CustomGalleryPicker";
 import LiveChart from "@app/screens/LiveChart";
+import LocalNotification from "@app/screens/LocalNotification";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -56,6 +57,7 @@ const AppNavigation = () => {
           <Stack.Screen name="Bridge" component={Bridge} />
           <Stack.Screen name="CustomGalleryPicker" component={CustomGalleryPicker} />
           <Stack.Screen name="LiveChart" component={LiveChart} />
+          <Stack.Screen name="LocalNotification" component={LocalNotification} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

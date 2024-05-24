@@ -1,5 +1,6 @@
 package com.practicereactnative;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.facebook.react.ReactActivity;
@@ -42,6 +43,11 @@ public class MainActivity extends ReactActivity {
       // If you opted-in for the New Architecture, we enable the Fabric Renderer.
       reactRootView.setIsFabric(BuildConfig.IS_NEW_ARCHITECTURE_ENABLED);
       return reactRootView;
+    }
+
+    @Override
+    public boolean onNewIntent(Intent intent) {
+      return super.onNewIntent(intent);
     }
   }
 }
