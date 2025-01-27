@@ -7,7 +7,8 @@
     "ios": "react-native run-ios --simulator=\"iPhone 15\"",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.23.1",
@@ -30,6 +31,8 @@
     "lottie-react-native": "^5.1.6",
     "moment": "^2.29.4",
     "nativewind": "^2.0.11",
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0",
     "react": "17.0.2",
     "react-native": "0.68.2",
     "react-native-echarts-pro": "^1.9.1",
