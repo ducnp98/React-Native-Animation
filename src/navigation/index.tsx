@@ -19,6 +19,7 @@ import Otp from "@app/screens/OTP";
 import Bridge from "@app/screens/Bridge";
 import CustomGalleryPicker from "@app/screens/CustomGalleryPicker";
 import LiveChart from "@app/screens/LiveChart";
+import Animated2025Stack from "./Animated2025Stack";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -33,6 +34,7 @@ const AppNavigation = () => {
           }}
         >
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
+          <Stack.Screen name="Animated2025Stack" component={Animated2025Stack} />
           <Stack.Screen name="AnimatedStack" component={AnimatedStack} />
           <Stack.Screen name="ReactHookStack" component={ReactHookStack} />
           <Stack.Screen name="ReanimatedStack" component={ReanimatedStack} />

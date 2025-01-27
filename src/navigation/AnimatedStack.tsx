@@ -4,7 +4,6 @@ import {
   CardStyleInterpolators,
   createStackNavigator,
 } from "@react-navigation/stack";
-import { RootStackParamList } from "navigation/RouteParams";
 import AnimatedScreen from "../screens/Animateds";
 import DraggableBottomSheet from "../screens/Animateds/DraggableBottomSheet";
 import ModalAnimation from "../screens/Animateds/ModalAnimation";
@@ -12,6 +11,7 @@ import PickPhoneColor from "../screens/Animateds/PhoneColorPicker";
 import AnimatedExample from "../screens/Animateds/AnimatedExample";
 import DoubleTapMessage from "../screens/Animateds/DoubleTapMessage";
 import WavingPhone from "../screens/Animateds/WavingPhone";
+import { RootStackParamList } from "./RouteParams";
 
 const Stack = createStackNavigator<RootStackParamList>();
 

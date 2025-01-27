@@ -33,6 +33,13 @@ const HomeScreen = () => {
   return (
     <View className="flex-1 bg-white flex justify-center items-center">
       <ScrollView style={{ paddingTop: insets.top || 16 }}>
+      <Button
+          title="Animated 2025"
+          onPress={() =>
+            navigate("Animated2025Stack", { screen: "Animated2025Screen" })
+          }
+          color="bg-yellow-300"
+        />
         <Button
           title="Animated"
           onPress={() =>
