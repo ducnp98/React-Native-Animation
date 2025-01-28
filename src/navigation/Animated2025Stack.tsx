@@ -6,6 +6,7 @@ import {
 import { RootStackParamList } from "./RouteParams";
 import Animated2025Screen from "@app/screens/Animated2025";
 import DraggableBottomSheet from "@app/screens/Animated2025/DraggableBottomSheet";
+import ScrollBehavior from "@app/screens/Animated2025/ScrollBehavior";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -32,6 +33,11 @@ const Animated2025Stack = () => {
       <Stack.Screen
         name="DraggableBottomSheet"
         component={DraggableBottomSheet}
+        options={{ headerShown: false }}
+      />
+        <Stack.Screen
+        name="ScrollBehavior"
+        component={ScrollBehavior}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

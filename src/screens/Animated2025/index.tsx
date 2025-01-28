@@ -33,7 +33,14 @@ const Animated2025Screen = () => {
         onPress={() =>
           navigate("Animated2025Stack", { screen: "DraggableBottomSheet" })
         }
-        color="bg-lime-300"
+        color="bg-gray-300"
+      />
+      <Button
+        title="Scroll Behavior"
+        onPress={() =>
+          navigate("Animated2025Stack", { screen: "ScrollBehavior" })
+        }
+        color="bg-gray-400"
       />
     </View>
   );

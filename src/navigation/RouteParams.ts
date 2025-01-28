@@ -40,6 +40,8 @@ export type FoodRecipeStack = {
 
 export interface Animated2025Stack extends ParamListBase {
   DraggableBottomSheet: undefined;
+  ScrollBehavior: undefined;
+  Animated2025Screen: undefined;
 }
 
 export interface RootStackParamList extends ParamListBase {
