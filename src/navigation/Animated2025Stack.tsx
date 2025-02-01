@@ -8,6 +8,7 @@ import Animated2025Screen from "@app/screens/Animated2025";
 import DraggableBottomSheet from "@app/screens/Animated2025/DraggableBottomSheet";
 import ScrollBehavior from "@app/screens/Animated2025/ScrollBehavior";
 import TabWithHeaderScroll from "@app/screens/Animated2025/TabWithHeaderScroll";
+import BottomTabBar from "@app/screens/Animated2025/BottomTabBar";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -44,6 +45,11 @@ const Animated2025Stack = () => {
       <Stack.Screen
         name="TabWithHeaderScroll"
         component={TabWithHeaderScroll}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="BottomTabBar"
+        component={BottomTabBar}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

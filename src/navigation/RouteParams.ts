@@ -43,6 +43,7 @@ export interface Animated2025Stack extends ParamListBase {
   ScrollBehavior: undefined;
   Animated2025Screen: undefined;
   TabWithHeaderScroll: undefined;
+  BottomTabBar: undefined;
 }
 
 export interface RootStackParamList extends ParamListBase {

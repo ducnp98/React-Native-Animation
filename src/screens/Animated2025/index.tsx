@@ -49,6 +49,13 @@ const Animated2025Screen = () => {
         }
         color="bg-gray-500"
       />
+      <Button
+        title="Bottom Tab Bar"
+        onPress={() =>
+          navigate("Animated2025Stack", { screen: "BottomTabBar" })
+        }
+        color="bg-gray-600"
+      />
     </View>
   );
 };
