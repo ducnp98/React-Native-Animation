@@ -292,7 +292,7 @@ PODS:
     - React-Core
   - react-native-cameraroll (5.6.0):
     - React-Core
-  - react-native-pager-view (6.2.0):
+  - react-native-pager-view (6.7.0):
     - React-Core
   - react-native-safe-area-context (4.10.1):
     - React-Core
@@ -650,7 +650,7 @@ SPEC CHECKSUMS:
   React-logger: 4d02c5a38d4ea66888bfa19448201520f1024260
   react-native-blur: c91c10c67be1f096415e63925640baa59e2132d2
   react-native-cameraroll: 3a3719e98d69e74755ae734d6528d195a61feaa8
-  react-native-pager-view: 7c6ae059318d0e7e72ff474f13ff5b246ce7d826
+  react-native-pager-view: 004bdafea9457fc7638b3d21a246426f073a238a
   react-native-safe-area-context: 8c70551c8688cd584a53487aa1b9361e991a3b4a
   react-native-video: 2aad0d963bf3952bd9ebb2f53fab799338e8e202
   react-native-webview: d3300363e8e7eb88d288445f5641a824a13fd981

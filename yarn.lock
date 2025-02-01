@@ -3579,6 +3579,11 @@ deprecated-react-native-prop-types@^4.2.1:
     invariant "*"
     prop-types "*"
 
+dequal@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/dequal/-/dequal-2.0.3.tgz#2644214f1997d39ed0ee0ece72335490a7ac67be"
+  integrity sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==
+
 destroy@1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/destroy/-/destroy-1.2.0.tgz"
@@ -4792,6 +4797,11 @@ iconv-lite@^0.6.2:
   integrity sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==
   dependencies:
     safer-buffer ">= 2.1.2 < 3.0.0"
+
+idx@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/idx/-/idx-3.0.3.tgz#547c6b6e63924c98e71a625ee6ca7cf1e6993bae"
+  integrity sha512-7F1oRdvgqH1vpiQ/GI3xYuXKrsc6GsuH51c9CZOPyJOKMbD8R6bjp16/SpuvHi8N5QOzP6EuCUPFxBa/4A16fQ==
 
 ieee754@^1.1.13:
   version "1.2.1"
@@ -7342,6 +7352,13 @@ react-native-codegen@^0.0.17:
     jscodeshift "^0.13.1"
     nullthrows "^1.1.1"
 
+react-native-collapsible-tab-view@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-collapsible-tab-view/-/react-native-collapsible-tab-view-8.0.0.tgz#b308e5cf6b94ae57099196b50a87f2d63c894a13"
+  integrity sha512-p3/CfBtCn/7qAllFeBM8KI4cCqqYfE0gzO/bh/oX6ewk2hE7HF0QQpZBGZlLdLJDo1lUXRlTSP2VLAYgky2maw==
+  dependencies:
+    use-deep-compare "^1.1.0"
+
 react-native-echarts-pro@^1.9.1:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/react-native-echarts-pro/-/react-native-echarts-pro-1.9.1.tgz#5e084a8747ff5d893bb395c873899e0bed81ebc4"
@@ -7401,10 +7418,10 @@ react-native-neomorph-shadows@^1.1.2:
     "@react-native-community/art" "^1.2.0"
     prop-types "^15.7.2"
 
-react-native-pager-view@^6.2.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/react-native-pager-view/-/react-native-pager-view-6.2.0.tgz#51380d93fbe47f6380dc71d613a787bf27a4ca37"
-  integrity sha512-pf9OnL/Tkr+5s4Gjmsn7xh91PtJLDa6qxYa/bmtUhd/+s4cQdWQ8DIFoOFghwZIHHHwVdWtoXkp6HtpjN+r20g==
+react-native-pager-view@^6.7.0:
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/react-native-pager-view/-/react-native-pager-view-6.7.0.tgz#88f2520e85f07ce55f3f56c57d6637249a215160"
+  integrity sha512-sutxKiMqBuQrEyt4mLaLNzy8taIC7IuYpxfcwQBXfSYBSSpAa0qE9G1FXlP/iXqTSlFgBXyK7BESsl9umOjECQ==
 
 react-native-reanimated@^3.5.0:
   version "3.11.0"
@@ -7478,12 +7495,12 @@ react-native-svg@^13.10.0:
     css-select "^5.1.0"
     css-tree "^1.1.3"
 
-react-native-tab-view@^3.5.2:
-  version "3.5.2"
-  resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-3.5.2.tgz#2789b8af6148b16835869566bf13dc3b0e6c1b46"
-  integrity sha512-nE5WqjbeEPsWQx4mtz81QGVvgHRhujTNIIZiMCx3Bj6CBFDafbk7XZp9ocmtzXUQaZ4bhtVS43R4FIiR4LboJw==
+react-native-tab-view@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-4.0.5.tgz#d12ec7dfd260c6acb247a401b3fc4abe6a3d466c"
+  integrity sha512-Xn3TpYo4yvKRC/f4+cOcvsXlitdnSaYkacshckrEI3JiDmFKNFIRVNxtZFggm4MwbJafq2RzuzR6xrgKoxgkTw==
   dependencies:
-    use-latest-callback "^0.1.5"
+    use-latest-callback "^0.2.1"
 
 react-native-vector-icons@^10.0.0:
   version "10.0.0"
@@ -7569,6 +7586,11 @@ react-navigation-shared-element@^3.1.3:
   integrity sha512-U1BZp7dEdcTNHggfkq3WEBlJeg4HwFhFdj7a0i0Uql/7mg2IHQg/bZaqM2jQvJITkABge6Hz5fZixIF8jyzpkg==
   dependencies:
     hoist-non-react-statics "^3.3.2"
+
+react-navigation@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-5.0.0.tgz#a7dd98a6148ba997834ebcf5a5073bdb3d4f4eb3"
+  integrity sha512-ACTzjc4L1ik7rJ092ZhIELBJ/pnoLgRIqWHSKcYcaBASxyjJCgBEDIV5s585HBj55tw25YwNdlj3+d4B4MYWDg==
 
 react-redux@^8.1.2:
   version "8.1.2"
@@ -8879,10 +8901,22 @@ urix@^0.1.0:
   resolved "https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
   integrity sha512-Am1ousAhSLBeB9cG/7k7r2R0zj50uDRlZHPGbazid5s9rlF1F/QKYObEKSIunSjIOkJZqwRRLpvewjEkM7pSqg==
 
+use-deep-compare@^1.1.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/use-deep-compare/-/use-deep-compare-1.3.0.tgz#b36d304072d306e6bf27ca5653f3277dd66d2c0d"
+  integrity sha512-94iG+dEdEP/Sl3WWde+w9StIunlV8Dgj+vkt5wTwMoFQLaijiEZSXXy8KtcStpmEDtIptRJiNeD4ACTtVvnIKA==
+  dependencies:
+    dequal "2.0.3"
+
 use-latest-callback@^0.1.5:
   version "0.1.6"
   resolved "https://registry.npmjs.org/use-latest-callback/-/use-latest-callback-0.1.6.tgz"
   integrity sha512-VO/P91A/PmKH9bcN9a7O3duSuxe6M14ZoYXgA6a8dab8doWNdhiIHzEkX/jFeTTRBsX0Ubk6nG4q2NIjNsj+bg==
+
+use-latest-callback@^0.2.1:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/use-latest-callback/-/use-latest-callback-0.2.3.tgz#2d644d3063040b9bc2d4c55bb525a13ae3de9e16"
+  integrity sha512-7vI3fBuyRcP91pazVboc4qu+6ZqM8izPWX9k7cRnT8hbD5svslcknsh3S9BUhaK11OmgTV4oWZZVSeQAiV53SQ==
 
 "use-subscription@>=1.0.0 <1.6.0":
   version "1.5.1"

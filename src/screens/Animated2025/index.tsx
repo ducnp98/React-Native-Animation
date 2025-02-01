@@ -42,6 +42,13 @@ const Animated2025Screen = () => {
         }
         color="bg-gray-400"
       />
+      <Button
+        title="Tab With Header Scroll"
+        onPress={() =>
+          navigate("Animated2025Stack", { screen: "TabWithHeaderScroll" })
+        }
+        color="bg-gray-500"
+      />
     </View>
   );
 };
