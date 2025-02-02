@@ -9,6 +9,7 @@ import DraggableBottomSheet from "@app/screens/Animated2025/DraggableBottomSheet
 import ScrollBehavior from "@app/screens/Animated2025/ScrollBehavior";
 import TabWithHeaderScroll from "@app/screens/Animated2025/TabWithHeaderScroll";
 import BottomTabBar from "@app/screens/Animated2025/BottomTabBar";
+import AddCartItem from "@app/screens/Animated2025/AddCartItem";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -50,6 +51,11 @@ const Animated2025Stack = () => {
       <Stack.Screen
         name="BottomTabBar"
         component={BottomTabBar}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="AddCartItem"
+        component={AddCartItem}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

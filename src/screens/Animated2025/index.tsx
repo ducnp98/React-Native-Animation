@@ -26,35 +26,37 @@ const Animated2025Screen = () => {
     );
   };
 
+  const onNavigate = (screen: string) => {
+    navigate("Animated2025Stack", { screen })
+  }
+
   return (
     <View className="flex-1 bg-white flex justify-center items-center">
       <Button
         title="Draggable Bottom Sheet"
-        onPress={() =>
-          navigate("Animated2025Stack", { screen: "DraggableBottomSheet" })
-        }
+        onPress={() => onNavigate('DraggableBottomSheet')}
         color="bg-gray-300"
       />
       <Button
         title="Scroll Behavior"
-        onPress={() =>
-          navigate("Animated2025Stack", { screen: "ScrollBehavior" })
-        }
+        onPress={() => onNavigate('ScrollBehavior')}
         color="bg-gray-400"
       />
       <Button
         title="Tab With Header Scroll"
-        onPress={() =>
-          navigate("Animated2025Stack", { screen: "TabWithHeaderScroll" })
-        }
+        onPress={() => onNavigate('TabWithHeaderScroll')}
         color="bg-gray-500"
       />
       <Button
         title="Bottom Tab Bar"
-        onPress={() =>
-          navigate("Animated2025Stack", { screen: "BottomTabBar" })
-        }
+        onPress={() => onNavigate('BottomTabBar')}
         color="bg-gray-600"
+      />
+          <Button
+        title="Add Cart Item"
+        onPress={() => onNavigate('AddCartItem')}
+
+        color="bg-gray-700"
       />
     </View>
   );
