@@ -52,11 +52,15 @@ const Animated2025Screen = () => {
         onPress={() => onNavigate('BottomTabBar')}
         color="bg-gray-600"
       />
-          <Button
+      <Button
         title="Add Cart Item"
         onPress={() => onNavigate('AddCartItem')}
-
         color="bg-gray-700"
+      />
+       <Button
+        title="Counter"
+        onPress={() => onNavigate('Counter')}
+        color="bg-gray-800"
       />
     </View>
   );
