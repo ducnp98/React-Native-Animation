@@ -46,6 +46,7 @@ export interface Animated2025Stack extends ParamListBase {
   BottomTabBar: undefined;
   AddCartItem: undefined;
   Counter: undefined;
+  Onboarding: undefined;
 }
 
 export interface RootStackParamList extends ParamListBase {

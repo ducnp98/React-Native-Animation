@@ -11,6 +11,7 @@ import TabWithHeaderScroll from "@app/screens/Animated2025/TabWithHeaderScroll";
 import BottomTabBar from "@app/screens/Animated2025/BottomTabBar";
 import AddCartItem from "@app/screens/Animated2025/AddCartItem";
 import Counter from "@app/screens/Animated2025/Counter";
+import Onboarding from "@app/screens/Animated2025/Onboarding";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -62,6 +63,11 @@ const Animated2025Stack = () => {
       <Stack.Screen
         name="Counter"
         component={Counter}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Onboarding"
+        component={Onboarding}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
